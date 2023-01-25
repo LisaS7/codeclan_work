@@ -1,0 +1,10 @@
+cd = change directory
+ls = list directory contents (-a flag to include hidden files, -l to display as a list)
+tree = visual representation of directory structure
+
+man = help pages (press q to exit)
+
+mkdir = create directory
+touch = create file
+rm = remove (-r recursive flag)
+mv = move file
