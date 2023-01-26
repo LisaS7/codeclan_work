@@ -16,6 +16,23 @@
 
 &nbsp;
 
+## VSCode
+
+| Shortcut           | Description                           |
+| ------------------ | ------------------------------------- |
+| Shift + Opt + f    | Format code                           |
+| Cmd + Shift + p    | Command palette                       |
+| Shift + Opt + down | Copy line/code block                  |
+| Opt + up/down      | Move line/code block                  |
+| Cmd + Opt + arrow  | Switch tabs                           |
+| Cmd + right/left   | Move to start/end of line             |
+| Cmd + click        | Place multiple cursor                 |
+| Cmd + d            | Select multiple instances of variable |
+
+---
+
+&nbsp;
+
 ## REPL
 
 | Shortcut | Description  |
