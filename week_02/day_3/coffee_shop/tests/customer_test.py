@@ -2,6 +2,7 @@ import unittest
 from src.customer import Customer
 from src.coffee_shop import CoffeeShop
 from src.food import Food
+from src.drinks import Drink
 
 
 class TestCustomer(unittest.TestCase):
@@ -33,17 +34,17 @@ class TestCustomer(unittest.TestCase):
         self.assertEqual(25, self.customer.wallet)
 
     def test_buy_drink__lower_energy(self):
-        drink_price = 10
-        self.customer.buy_drink(drink_price, 18, self.coffee_shop)
+        drink = Drink("Mocha", 10, 18)
+        self.customer.buy_drink(drink, self.coffee_shop)
         self.assertEqual(40, self.customer.wallet)
         self.assertEqual(210, self.coffee_shop.till)
         self.assertEqual(18, self.customer.energy)
 
     def test_buy_drink__higher_energy(self):
-        drink_price = 10
+        drink = Drink("Mocha", 10, 18)
         self.customer_1 = Customer("Perry", 50, 12)
         self.customer_1.energy = 60
-        self.customer_1.buy_drink(drink_price, 18, self.coffee_shop)
+        self.customer_1.buy_drink(drink, self.coffee_shop)
         self.assertEqual(50, self.customer_1.wallet)
         self.assertEqual(200, self.coffee_shop.till)
         self.assertEqual(60, self.customer_1.energy)

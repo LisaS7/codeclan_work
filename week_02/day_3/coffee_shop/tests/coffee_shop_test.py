@@ -6,24 +6,9 @@ from src.drinks import Drink
 class TestCoffeeShop(unittest.TestCase):
     def setUp(self):
 
-        stock = [{"drinks":{
-                    "Mocha": {
-                        "price": 8,
-                        "caffeine_level": 15,
-                    }
-
-                    "Tea": {
-                        "price": 3,
-                        "caffenine_level": 5,
-                    }
-                }}]
-
         mocha = Drink("Mocha", 5, 15)
         tea = Drink("Tea", 3, 10)
-        drinks = {
-            mocha: 20,
-            tea: 28,
-        }
+        drinks = {mocha: 5, tea: 8}
         self.coffee_shop = CoffeeShop("Cool Beans", 100, drinks)
 
     def test_has_name(self):
@@ -36,8 +21,18 @@ class TestCoffeeShop(unittest.TestCase):
         self.coffee_shop.increase_till(10)
         self.assertEqual(110, self.coffee_shop.till)
 
+    def test_add_drink(self):
+        latte = Drink("Latte", 5, 15)
+        self.coffee_shop.add_drink(latte)
+        self.assertEqual(1, self.coffee_shop.drinks[latte])
+
     def test_has_drinks(self):
-        self.assertEqual(self.drinks, self.coffee_shop.drinks)
+        mocha = Drink("Mocha", 5, 15)
+        tea = Drink("Tea", 3, 10)
+        abc = {mocha: 5, tea: 8}
+        self.coffee_shop.drinks = abc
+        print(self.coffee_shop.__dict__)
+        self.assertEqual(self.drinks[mocha], self.coffee_shop.drinks[mocha])
 
     def test_stock_total(self):
-        self.assertEqual(48, self.coffee_shop.stock_total())
+        self.assertEqual(13, self.coffee_shop.stock_total())

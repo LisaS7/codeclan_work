@@ -8,11 +8,11 @@ class Customer:
     def reduce_wallet(self, amount):
         self.wallet -= amount
 
-    def buy_drink(self, price, caffeine_level, coffee_shop):
+    def buy_drink(self, drink, coffee_shop):
         if self.is_over_16() and self.check_energy_level():
-            self.reduce_wallet(price)
-            coffee_shop.increase_till(price)
-            self.increase_energy_level(caffeine_level)
+            self.reduce_wallet(drink.price)
+            coffee_shop.increase_till(drink.price)
+            self.increase_energy_level(drink.caffeine_level)
 
     def is_over_16(self):
         return self.age >= 16

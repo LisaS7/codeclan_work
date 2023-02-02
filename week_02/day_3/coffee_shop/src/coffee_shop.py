@@ -7,6 +7,12 @@ class CoffeeShop:
     def increase_till(self, amount):
         self.till += amount
 
+    def add_drink(self, drink):
+        if drink in self.drinks:
+            self.drinks[drink] += 1
+        else:
+            self.drinks[drink] = 1
+
     def stock_total(self):
         # stock_total = 0
         # for drink in self.drinks:
