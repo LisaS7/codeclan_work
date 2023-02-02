@@ -5,11 +5,10 @@ from src.drinks import Drink
 
 class TestCoffeeShop(unittest.TestCase):
     def setUp(self):
-
         mocha = Drink("Mocha", 5, 15)
         tea = Drink("Tea", 3, 10)
-        drinks = {mocha: 5, tea: 8}
-        self.coffee_shop = CoffeeShop("Cool Beans", 100, drinks)
+        self.drinks = {mocha: 5, tea: 8}
+        self.coffee_shop = CoffeeShop("Cool Beans", 100, self.drinks)
 
     def test_has_name(self):
         self.assertEqual("Cool Beans", self.coffee_shop.name)
@@ -27,12 +26,7 @@ class TestCoffeeShop(unittest.TestCase):
         self.assertEqual(1, self.coffee_shop.drinks[latte])
 
     def test_has_drinks(self):
-        mocha = Drink("Mocha", 5, 15)
-        tea = Drink("Tea", 3, 10)
-        abc = {mocha: 5, tea: 8}
-        self.coffee_shop.drinks = abc
-        print(self.coffee_shop.__dict__)
-        self.assertEqual(self.drinks[mocha], self.coffee_shop.drinks[mocha])
+        self.assertEqual(self.drinks, self.coffee_shop.drinks)
 
     def test_stock_total(self):
         self.assertEqual(13, self.coffee_shop.stock_total())
