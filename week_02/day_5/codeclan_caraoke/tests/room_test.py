@@ -24,6 +24,9 @@ class TestRoom(unittest.TestCase):
     def test_has_entry_fee(self):
         self.assertEqual(10, self.room.entry_fee)
 
+    def test_has_empty_tabs(self):
+        self.assertEqual({}, self.room.guest_tabs)
+
     def test_check_in_guest__capacity_success(self):
         self.room.check_in(self.guest1)
         self.assertIn(self.guest1, self.room.guests)
@@ -72,3 +75,7 @@ class TestRoom(unittest.TestCase):
     def test_add_song(self):
         self.room.add_song(self.song1)
         self.assertIn(self.song1, self.room.songs)
+
+    def test_add_to_tab(self):
+        self.room.add_to_tab(self.guest1, 20)
+        self.assertEqual(20, self.room.guest_tabs[self.guest1])

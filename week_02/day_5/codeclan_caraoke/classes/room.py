@@ -5,6 +5,7 @@ class Room:
         self.songs = []
         self.capacity = capacity
         self.entry_fee = entry_fee
+        self.guest_tabs = {}
 
     def check_in(self, guest):
         if self.room_has_space() and guest.can_afford_fee(self.entry_fee):
@@ -23,3 +24,9 @@ class Room:
 
     def add_song(self, song):
         self.songs.append(song)
+
+    def add_to_tab(self, guest, amount):
+        if guest in self.guest_tabs:
+            self.guest_tabs[guest] += amount
+        else:
+            self.guest_tabs[guest] = amount
