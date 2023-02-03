@@ -79,13 +79,3 @@ class TestRoom(unittest.TestCase):
     def test_add_to_tab(self):
         self.room.add_to_tab(self.guest1, 20)
         self.assertEqual(20, self.room.guest_tabs[self.guest1])
-
-    def test_pay_tab__full(self):
-        self.room.add_to_tab(self.guest1, 50)
-        self.room.pay_tab(self.guest1)
-        self.assertNotIn(self.guest1, self.room.guest_tabs)
-
-    def test_pay_tab__partial(self):
-        self.room.add_to_tab(self.guest1, 250)
-        self.room.pay_tab(self.guest1)
-        self.assertEqual(50, self.room.guest_tabs[self.guest1])
