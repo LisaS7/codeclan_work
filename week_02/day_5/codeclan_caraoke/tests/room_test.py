@@ -43,6 +43,11 @@ class TestRoom(unittest.TestCase):
         self.room.check_in(guest)
         self.assertNotIn(guest, self.room.guests)
 
+    def test_check_in_guest__heard_favourite_song(self):
+        self.room.add_song(self.song1)
+        message = self.room.check_in(self.guest1)
+        self.assertEqual("OMG, I love this song!!!", message)
+
     def test_check_out_guest(self):
         self.room.check_in(self.guest1)
         self.room.check_in(self.guest2)

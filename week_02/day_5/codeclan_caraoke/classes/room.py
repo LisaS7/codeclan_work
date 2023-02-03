@@ -10,6 +10,7 @@ class Room:
         if self.room_has_space() and guest.can_afford_fee(self.entry_fee):
             guest.spend_cash(self.entry_fee)
             self.guests.append(guest)
+            return guest.hears_favourite_song(self)
 
     def check_out(self, guest):
         self.guests.remove(guest)
