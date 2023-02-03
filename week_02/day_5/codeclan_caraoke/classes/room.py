@@ -8,7 +8,7 @@ class Room:
         self.guest_tabs = {}
 
     def check_in(self, guest):
-        if self.room_has_space() and guest.can_afford_fee(self.entry_fee):
+        if self.room_has_space() and guest.can_afford(self.entry_fee):
             guest.spend_cash(self.entry_fee)
             self.guests.append(guest)
             return guest.hears_favourite_song(self.songs)

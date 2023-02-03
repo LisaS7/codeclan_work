@@ -3,11 +3,12 @@ class Guest:
         self.name = name
         self.cash = cash
         self.favourite_song = favourite_song
+        self.food_ordered = []
 
     def spend_cash(self, amount):
         self.cash -= amount
 
-    def can_afford_fee(self, amount):
+    def can_afford(self, amount):
         return self.cash >= amount
 
     def hears_favourite_song(self, songs):
@@ -24,3 +25,11 @@ class Guest:
 
             if guest_tabs[self] == 0:
                 guest_tabs.pop(self)
+
+    def buy_snack(self, snack, on_tab=False, room=None):
+        if self.can_afford(snack.price):
+            self.food_ordered.append(snack)
+            if on_tab:
+                room.add_to_tab(self, snack.price)
+            else:
+                self.spend_cash(snack.price)
