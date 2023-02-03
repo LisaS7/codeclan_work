@@ -1,6 +1,7 @@
 import unittest
 from classes.guest import Guest
 from classes.song import Song
+from classes.room import Room
 
 
 class TestGuest(unittest.TestCase):
@@ -26,3 +27,15 @@ class TestGuest(unittest.TestCase):
 
     def test_can_afford_fee__false(self):
         self.assertEqual(False, self.guest.can_afford_fee(700))
+
+    def test_hears_favourite_song__heard(self):
+        room = Room("Pewter", 10, 5)
+        room.add_song(self.song)
+        heard_song = self.guest.hears_favourite_song(room)
+        self.assertEqual("OMG, I love this song!!!", heard_song)
+
+    def test_hears_favourite_song__not_heard(self):
+        room = Room("Pewter", 10, 5)
+        song = Song("Through Glass", "Stone Sour")
+        room.add_song(song)
+        self.assertEqual(None, self.guest.hears_favourite_song(room))
