@@ -30,3 +30,14 @@ class Room:
             self.guest_tabs[guest] += amount
         else:
             self.guest_tabs[guest] = amount
+
+    def pay_tab(self, guest):
+        if guest in self.guest_tabs:
+            tab = self.guest_tabs[guest]
+
+            amount_to_pay = min(tab, guest.cash)
+            guest.spend_cash(amount_to_pay)
+            self.guest_tabs[guest] -= amount_to_pay
+
+            if self.guest_tabs[guest] == 0:
+                self.guest_tabs.pop(guest)
