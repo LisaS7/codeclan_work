@@ -38,7 +38,8 @@ class TestGuest(unittest.TestCase):
     def test_hears_favourite_song__not_heard(self):
         song = Song("Through Glass", "Stone Sour")
         self.room.add_song(song)
-        self.assertEqual(None, self.guest.hears_favourite_song(self.room.songs))
+        heard_song = self.guest.hears_favourite_song(self.room.songs)
+        self.assertEqual(None, heard_song)
 
     def test_pay_tab__full(self):
         self.room.add_to_tab(self.guest, 50)
