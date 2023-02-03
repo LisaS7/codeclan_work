@@ -5,7 +5,7 @@ from classes.song import Song
 
 class TestGuest(unittest.TestCase):
     def setUp(self):
-        self.song = Song("Before I Forget", "Slipknot")
+        self.song = Song("Psychosocial", "Slipknot")
         self.guest = Guest("Corey Taylor", 500, self.song)
 
     def test_has_name(self):

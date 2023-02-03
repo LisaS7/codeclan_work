@@ -7,7 +7,8 @@ class Room:
         self.entry_fee = entry_fee
 
     def check_in(self, guest):
-        if self.room_has_space():
+        if self.room_has_space() and guest.can_afford_fee(self.entry_fee):
+            guest.spend_cash(self.entry_fee)
             self.guests.append(guest)
 
     def check_out(self, guest):

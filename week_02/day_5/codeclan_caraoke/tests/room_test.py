@@ -24,15 +24,24 @@ class TestRoom(unittest.TestCase):
     def test_has_entry_fee(self):
         self.assertEqual(10, self.room.entry_fee)
 
-    def test_check_in_guest__success(self):
+    def test_check_in_guest__capacity_success(self):
         self.room.check_in(self.guest1)
         self.assertIn(self.guest1, self.room.guests)
 
-    def test_check_in_guest__fail(self):
+    def test_check_in_guest__capacity_fail(self):
         for _ in range(5):
             self.room.check_in(self.guest1)
         self.room.check_in(self.guest2)
         self.assertNotIn(self.guest2, self.room.guests)
+
+    def test_check_in_guest__can_afford(self):
+        self.room.check_in(self.guest1)
+        self.assertIn(self.guest1, self.room.guests)
+
+    def test_check_in_guest__cant_afford(self):
+        guest = Guest("Dave Grohl", 2, self.song2)
+        self.room.check_in(guest)
+        self.assertNotIn(guest, self.room.guests)
 
     def test_check_out_guest(self):
         self.room.check_in(self.guest1)
