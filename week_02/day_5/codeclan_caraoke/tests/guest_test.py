@@ -20,3 +20,9 @@ class TestGuest(unittest.TestCase):
     def test_spend_cash(self):
         self.guest.spend_cash(100)
         self.assertEqual(400, self.guest.cash)
+
+    def test_can_afford_fee__true(self):
+        self.assertEqual(True, self.guest.can_afford_fee(10))
+
+    def test_can_afford_fee__false(self):
+        self.assertEqual(False, self.guest.can_afford_fee(700))

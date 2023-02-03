@@ -6,3 +6,6 @@ class Guest:
 
     def spend_cash(self, amount):
         self.cash -= amount
+
+    def can_afford_fee(self, amount):
+        return self.cash >= amount
