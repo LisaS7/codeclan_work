@@ -10,6 +10,6 @@ class Guest:
     def can_afford_fee(self, amount):
         return self.cash >= amount
 
-    def hears_favourite_song(self, room):
-        if self.favourite_song in room.songs:
+    def hears_favourite_song(self, songs):
+        if self.favourite_song in songs:
             return "OMG, I love this song!!!"

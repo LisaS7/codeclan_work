@@ -31,11 +31,11 @@ class TestGuest(unittest.TestCase):
     def test_hears_favourite_song__heard(self):
         room = Room("Pewter", 10, 5)
         room.add_song(self.song)
-        heard_song = self.guest.hears_favourite_song(room)
+        heard_song = self.guest.hears_favourite_song(room.songs)
         self.assertEqual("OMG, I love this song!!!", heard_song)
 
     def test_hears_favourite_song__not_heard(self):
         room = Room("Pewter", 10, 5)
         song = Song("Through Glass", "Stone Sour")
         room.add_song(song)
-        self.assertEqual(None, self.guest.hears_favourite_song(room))
+        self.assertEqual(None, self.guest.hears_favourite_song(room.songs))
