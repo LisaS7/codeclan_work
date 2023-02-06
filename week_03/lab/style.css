@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+}
+
+body > header {
+    background-color: cornflowerblue;
+    color: aliceblue;
+    padding: 1rem;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: lightslategray;
+}
+
+form {
+    padding: 1rem;
+}
+
+body > footer {
+    padding: 1rem;
+    background-color:cornflowerblue;
+}
+
+body > footer > p {
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
