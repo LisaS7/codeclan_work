@@ -14,19 +14,45 @@ body > header {
 .nav-links {
     list-style: none;
     padding: 0;
+    
 }
 
-a {
+.nav-links > li > a {
     color: aliceblue;
     text-decoration: none;
 }
 
-a:hover {
-    color: lightslategray;
+button {
+    margin-top: 0.75rem;
 }
 
-form {
-    padding: 1rem;
+main {
+    padding: 2rem;
+}
+
+div {
+    margin: 4rem 1rem;
+}
+
+article {
+    margin: 5rem;
+}
+
+textarea {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.latest-img {
+    width: 15rem;
+}
+
+.profile-image {
+    width: 6rem;
+}
+
+.comment-item {
+    list-style: none;
 }
 
 body > footer {

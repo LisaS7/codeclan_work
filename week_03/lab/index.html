@@ -26,14 +26,99 @@
       </nav>
     </header>
     <main>
-      <form>
-        <h2>Login</h2>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" /><br />
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" /><br />
-        <button>Submit</button>
-      </form>
+      <header>
+        <form>
+          <h2>Login</h2>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" /><br />
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" /><br />
+          <button>Submit</button>
+        </form>
+        <h2>Categories</h2>
+        <ul>
+          <li><a href="/latest">Latest</a></li>
+          <li><a href="/local">Local</a></li>
+          <li><a href="/politics">Politics</a></li>
+          <li><a href="/sports">Sports</a></li>
+        </ul>
+        <h2>Latest</h2>
+        <h3>Breaking News</h3>
+        <div>
+          <img class="latest-img" src="images/spyro.jpeg" alt="Spyro" />
+          <h4>Story Headline</h4>
+          <p>
+            This is the first line of the article. The user would click on the
+            preview to read more...
+          </p>
+        </div>
+        <div>
+          <img class="latest-img" src="images/crash.jpeg" alt="Spyro" />
+          <h4>Story Headline</h4>
+          <p>
+            This is the first line of the article. The user would click on the
+            preview to read more...
+          </p>
+        </div>
+        <div>
+          <img class="latest-img" src="images/mario.jpeg" alt="Spyro" />
+          <h4>Story Headline</h4>
+          <p>
+            This is the first line of the article. The user would click on the
+            preview to read more...
+          </p>
+        </div>
+      </header>
+      <article>
+        <h2>Main Headline</h2>
+        <h3>Author Name</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta
+          tempora perspiciatis corporis doloribus quod alias, quo voluptate
+          expedita fugiat nostrum nulla incidunt sequi illo molestiae molestias
+          mollitia eum, laborum a itaque harum ab vel quibusdam. Impedit
+          inventore, laudantium maxime unde quae a amet cupiditate veritatis
+          vero temporibus saepe sed ullam?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+          quam alias illo nihil nesciunt minus molestias assumenda, mollitia
+          culpa animi ipsa impedit fugit quod, qui in aperiam! Amet ipsum atque
+          neque! Odit nemo quod sit reiciendis repudiandae distinctio
+          perspiciatis eius!
+        </p>
+        <form action="">
+          <h2>Comments</h2>
+          <textarea
+            name="comments"
+            id="comments"
+            rows="5"
+            placeholder="Enter your comment...!"
+          ></textarea>
+          <button>Submit</button>
+        </form>
+        <ul class="comment-item">
+          <li>
+            <hr />
+            <img class="profile-image" src="images/cat.jpeg" alt="cat image" />
+            <h3>Posted: 23/03/2020</h3>
+            <p>This was interesting, thanks!</p>
+          </li>
+          <li>
+            <hr />
+            <img class="profile-image" src="images/cat.jpeg" alt="cat image" />
+            <h3>Posted: 25/03/2020</h3>
+            <p>Cool pictures!</p>
+          </li>
+          <li>
+            <hr />
+            <img class="profile-image" src="images/cat.jpeg" alt="cat image" />
+            <h3>Posted: 26/03/2020</h3>
+            <p>You suck.</p>
+          </li>
+        </ul>
+        <div></div>
+      </article>
     </main>
     <footer>
       <p>&copy; CodeClan 2023</p>
