@@ -1,0 +1,183 @@
+body {
+  /* Set the font-family for the entire body to Roboto with a generic family of sans-serif */
+  /* Hint: https://developer.mozilla.org/en-US/docs/Web/CSS/font-family */
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  /* 
+  - Give the header a height of 4rem and background color (#4584b1). What is a rem?
+  Hint: https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
+  - Give the text a color of #fff and make the font size 2 rem
+  - Use flexbox to vertically align the "CodeClan Travel" logo in the center
+  Hint: https://developer.mozilla.org/en-US/docs/Web/CSS/align-items
+  */
+  height: 4rem;
+  background-color: #4584b1;
+  color: #fff;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  /* The logo element has an id of logo */
+  /* Give the logo element a left margin of 40px */
+  margin-left: 40px;
+}
+
+nav {
+  /* Give the nav a background color (#103594) */
+  /* Use rem units to give the nav an appropriate height */
+  /* Use flexbox to vertially align the nav child elements in the center */
+  background-color: #103594;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+}
+
+nav ul {
+  /* Use flexbox to layout the li elements horizontally */
+  display: flex;
+  gap: 2rem;
+}
+
+/* Now it's time for the navigation links */
+/* Create a CSS block that targets all of the <li> elements that are children of the <nav> element */
+/* Use the following properties inside the block. */
+/* We haven't provided the values in this case so use the values you think would be appropriate:
+  - color
+  - font-size
+  - list-style
+  - margin-right
+*/
+nav > ul > li {
+  color: white;
+  font-size: 1.2rem;
+  list-style: none;
+  margin-right: 0.2rem;
+}
+
+/* Create a block that targets all of the <a> elements that are children of <li> elements in the <nav>  */
+/* Give them a color of #fff and text-decoration of none */
+nav > ul > li > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Create another block that targets all of the <a> elements that are children of <li> elements in the <nav>  */
+/* Use the :hover pseudo-class to add an underline on hover */
+nav > ul > li > a:hover {
+  text-decoration: underline;
+}
+
+
+/* Where to go section includes an <h3> element and a <form>  */
+/* Create a block that targets the where-togo class and give it a background color of #040E27 and suitable padding */
+/* Hint: https://developer.mozilla.org/en-US/docs/Web/CSS/padding */
+
+
+/* Create a block that targets the <h3> child of the where-togo class  */
+/* Use the font-size and color properties to style the <h3> element */
+
+/* The search form has a class of search-form. We want the input fields to  */
+/* display horizontally. The easiest way to make a group of elements horizontal is to use flexbox */
+/* Create a block that targets the search-form class and give it a display of flex */
+
+/* Notice that each form input is wrapped in a div */
+/* Create a block that targets the input-field class and apply a suitable width and margin */
+
+/* Styling the elements of Forms is difficult. */
+/* Hint: https://developer.mozilla.org/en-US/docs/Learn/Forms/Advanced_form_styling */
+
+input {
+  /* Style the form input elements using width, height, padding-left and border-radius */
+}
+
+.nice-select {
+  /* Select elements are not imput elements! Therefore we've given the <select> element it's own class  */
+  /* They are notoriously difficult to style with css */
+  /* In this case you can use width, height, font-size, color, border and border-radius */
+}
+
+.search-btn {
+  /* Buttons are probably the most fun to style! The border-radius and cursor properties can quickly make a button look good */
+  /* Style the search button using the following properties: */
+  /* 
+  - background
+  - color
+  - font-size
+  - height
+  - width
+  - border
+  - border-radius
+  - cursor
+  */
+}
+
+.container {
+  /* The destinations are enclosed in an article element that we want to make a grid */
+  /* Set the display property to 'grid' and justify the content */
+}
+
+.row {
+  /* The row of the grid has 3 columns which should be the same width and roughly a third of the available space */
+  /* Use the grid-template-columns property to set each column to 30% */
+  /* You can experiment with different units for the width values */
+  /* Hint: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns */
+}
+
+.section-title {
+  /* The <div> with class section-title contains an <h3> child which we want to center */
+  /* The easiest way to center child elements is to set the display property to 'flex' and justify the content */
+}
+
+.single-destination {
+  /* Use the margin property to make some space between the destinations */
+  /* Set the overflow to 'hidden' */
+  /* The overflow CSS shorthand property sets the desired behaviour for an element's overflow 
+    — i.e. when an element's content is too big to fit. In this case, the image is too big too fit. */
+}
+
+img {
+  /* Set the max-width property to 100% */
+}
+
+/* Let's take the training wheels off. Finish off the page by adding styles to the remaining blocks */
+
+.testimonial-area {
+  /* Write your code here */
+}
+
+.single-testmonial{
+  /* Write your code here */
+}
+
+.footer {
+  /* Write your code here */
+}
+
+.footer-widget p {
+  /* Write your code here */
+}
+
+.footer-widget a:hover {
+   /* Write your code here */
+}
+
+.footer-widget ul li {
+  /* Write your code here */
+}
+
+.footer-widget a {
+   /* Write your code here */
+}
+
+/* Media Queries */
+
+@media (max-width: 720px) {
+    /* Add some responsive code here */
+    /* Make the destinations stack on top of each other */
+    /* Make the form input stack on top of each other */
+}
