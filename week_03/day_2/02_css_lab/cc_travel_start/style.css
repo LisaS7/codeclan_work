@@ -76,29 +76,53 @@ nav > ul > li > a:hover {
 /* Where to go section includes an <h3> element and a <form>  */
 /* Create a block that targets the where-togo class and give it a background color of #040E27 and suitable padding */
 /* Hint: https://developer.mozilla.org/en-US/docs/Web/CSS/padding */
-
+.where-togo {
+  background-color: #040E27;
+  padding: 0.6rem;
+}
 
 /* Create a block that targets the <h3> child of the where-togo class  */
 /* Use the font-size and color properties to style the <h3> element */
+.where-togo > h3 {
+  font-size: 1.8rem;
+  color: white;
+}
 
 /* The search form has a class of search-form. We want the input fields to  */
 /* display horizontally. The easiest way to make a group of elements horizontal is to use flexbox */
 /* Create a block that targets the search-form class and give it a display of flex */
+.where-togo > form {
+  display: flex;
+}
 
 /* Notice that each form input is wrapped in a div */
 /* Create a block that targets the input-field class and apply a suitable width and margin */
+.input-field {
+  width: 6rem;
+  margin: 2rem;
+}
 
 /* Styling the elements of Forms is difficult. */
 /* Hint: https://developer.mozilla.org/en-US/docs/Learn/Forms/Advanced_form_styling */
 
 input {
   /* Style the form input elements using width, height, padding-left and border-radius */
+  width: 8rem;
+  height: 2rem;
+  padding-left: 1rem;
+  border-radius: 0.2rem;
 }
 
 .nice-select {
   /* Select elements are not imput elements! Therefore we've given the <select> element it's own class  */
   /* They are notoriously difficult to style with css */
   /* In this case you can use width, height, font-size, color, border and border-radius */
+  width: 8rem;
+  height: 2.1rem;
+  font-size: 0.7rem;
+  color: lightslategray;
+  border: none;
+  border-radius: 0.2rem;
 }
 
 .search-btn {
@@ -114,6 +138,14 @@ input {
   - border-radius
   - cursor
   */
+  background-color:rgb(252, 40, 64);
+  color: white;
+  font-size: 0.7rem;
+  height: 2rem;
+  width: 4rem;
+  border: none;
+  border-radius: 0.2rem;
+  cursor:pointer;
 }
 
 .container {
