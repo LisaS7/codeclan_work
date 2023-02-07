@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
 .white-text {
     color: white;
 }
@@ -9,10 +15,19 @@ ul {
 body>header {
     padding: 1rem;
     background: dodgerblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header>nav>ul {
+.nav-list {
     padding: 0;
+    display: flex;
+    gap: 0.4rem;
+}
+
+.nav-list > li > a {
+    text-decoration: none;
 }
 
 body>main {
@@ -22,15 +37,31 @@ body>main {
 #author {
     padding: 1rem;
     border: 2px dashed #eee;
+    display: flex;
+    gap: 1rem;
 }
 
 #author>img {
     border-radius: 100%;
 }
 
+#author>section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.m0 {
+    margin: 0;
+}
+
 body>footer {
     padding: 1rem;
     background: dodgerblue;
+    
 }
 
-#footer-container {}
+#footer-container {
+    display: flex;
+    justify-content: space-evenly;
+}
