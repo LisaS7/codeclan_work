@@ -8,19 +8,41 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='style.css') }}"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <title>Orders</title>
   </head>
   <body>
-    <h1>Orders</h1>
+    <h1>
+      <span class="material-symbols-outlined"> shopping_cart </span> Orders
+    </h1>
+
     <div class="order-cards">
       {% for order in orders %}
       <div class="order-single">
-        <p>Name: <small>{{ order.customer_name }}</small></p>
-        <p>Date: <small>{{ order.order_date }}</small></p>
-        <p>Quantity: <small>{{ order.quantity }}</small></p>
-        <p>
-          Book: <small>{{ order.book.title }}, {{ order.book.author }}</small>
-        </p>
+        <table>
+          <tr>
+            <td>Name:</td>
+            <td><small>{{ order.customer_name }}</small></td>
+          </tr>
+          <tr>
+            <td>Date:</td>
+            <td><small>{{ order.order_date }}</small></td>
+          </tr>
+          <tr>
+            <td>Quantity:</td>
+            <td><small>{{ order.quantity }}</small></td>
+          </tr>
+          <tr>
+            <td>Book:</td>
+            <td>
+              <small>{{ order.book.title }}, {{ order.book.author }}</small>
+            </td>
+          </tr>
+        </table>
+
         <a href="{{ url_for('order', index=loop.index-1) }}">Details</a>
       </div>
       {% endfor %}
