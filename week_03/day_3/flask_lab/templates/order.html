@@ -13,12 +13,26 @@
   <body>
     <h1>Order Details</h1>
     <div class="order-single">
-      <p>Name: <small>{{ order.customer_name }}</small></p>
-      <p>Date: <small>{{ order.order_date }}</small></p>
-      <p>Quantity: <small>{{ order.quantity }}</small></p>
-      <p>
-        Book: <small>{{ order.book.title }}, {{ order.book.author }}</small>
-      </p>
+      <table>
+        <tr>
+          <td>Name:</td>
+          <td><small>{{ order.customer_name }}</small></td>
+        </tr>
+        <tr>
+          <td>Date:</td>
+          <td><small>{{ order.order_date }}</small></td>
+        </tr>
+        <tr>
+          <td>Quantity:</td>
+          <td><small>{{ order.quantity }}</small></td>
+        </tr>
+        <tr>
+          <td>Book:</td>
+          <td>
+            <small>{{ order.book.title }}, {{ order.book.author }}</small>
+          </td>
+        </tr>
+      </table>
     </div>
   </body>
 </html>
