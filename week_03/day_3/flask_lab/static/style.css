@@ -4,9 +4,22 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
-section {
-    background-color: lavender;
+.order-cards {
+    margin: auto;
+    width: 80%;
+    display: flex;
+    gap: 1rem;
+}
+
+.order-single {
+    color: lightgrey;
+    background-color:rgb(49, 49, 49);
     padding: 1rem;
-    margin: 1rem;
     border-radius: 0.5rem;
+    max-width: 15rem;
+}
+
+a {
+    color:rgb(162, 187, 218);
+    text-decoration: none;
 }
