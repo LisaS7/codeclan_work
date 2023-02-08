@@ -31,16 +31,14 @@ nav {
   /* Use rem units to give the nav an appropriate height */
   /* Use flexbox to vertially align the nav child elements in the center */
   background-color: #103594;
-  height: 2rem;
+  height: 3rem;
   display: flex;
   align-items: center;
-  padding: 0.3rem;
 }
 
 nav ul {
   /* Use flexbox to layout the li elements horizontally */
   display: flex;
-  gap: 2rem;
 }
 
 /* Now it's time for the navigation links */
@@ -52,23 +50,23 @@ nav ul {
   - list-style
   - margin-right
 */
-nav > ul > li {
+nav li {
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   list-style: none;
-  margin-right: 0.2rem;
+  margin-right: 2rem;
 }
 
 /* Create a block that targets all of the <a> elements that are children of <li> elements in the <nav>  */
 /* Give them a color of #fff and text-decoration of none */
-nav > ul > li > a {
+nav li a {
   color: #fff;
   text-decoration: none;
 }
 
 /* Create another block that targets all of the <a> elements that are children of <li> elements in the <nav>  */
 /* Use the :hover pseudo-class to add an underline on hover */
-nav > ul > li > a:hover {
+nav li a:hover {
   text-decoration: underline;
 }
 
@@ -98,7 +96,7 @@ nav > ul > li > a:hover {
 /* Notice that each form input is wrapped in a div */
 /* Create a block that targets the input-field class and apply a suitable width and margin */
 .input-field {
-  width: 6rem;
+  width: 10rem;
   margin: 2rem;
 }
 
@@ -107,7 +105,7 @@ nav > ul > li > a:hover {
 
 input {
   /* Style the form input elements using width, height, padding-left and border-radius */
-  width: 8rem;
+  width: 100%;
   height: 2rem;
   padding-left: 1rem;
   border-radius: 0.2rem;
@@ -117,9 +115,9 @@ input {
   /* Select elements are not imput elements! Therefore we've given the <select> element it's own class  */
   /* They are notoriously difficult to style with css */
   /* In this case you can use width, height, font-size, color, border and border-radius */
-  width: 8rem;
+  width: 100%;
   height: 2.1rem;
-  font-size: 0.7rem;
+  font-size: 1rem;
   color: lightslategray;
   border: none;
   border-radius: 0.2rem;
@@ -152,7 +150,7 @@ input {
   /* The destinations are enclosed in an article element that we want to make a grid */
   /* Set the display property to 'grid' and justify the content */
   display: grid;
-  justify-content:space-evenly;
+  justify-content: center;
 
 }
 
@@ -176,7 +174,7 @@ input {
   /* Set the overflow to 'hidden' */
   /* The overflow CSS shorthand property sets the desired behaviour for an element's overflow 
     — i.e. when an element's content is too big to fit. In this case, the image is too big too fit. */
-  margin: 1rem;
+  margin: 0.5rem;
   overflow: hidden;
   }
 
@@ -197,9 +195,13 @@ img {
 .single-testmonial{
   background-color: #d6eaf1;
   width: 15rem;
+  height: 18rem;
   padding: 1rem;
   margin: 1rem;
   border-radius: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   
 }
 
@@ -210,7 +212,6 @@ img {
 }
 
 .footer-widget p {
-  color: white;
   font-size: 0.7rem;
   line-height: 1.5rem;
 }
@@ -220,7 +221,6 @@ img {
 }
 
 .footer-widget ul li {
-  color: white;
   margin: 0.7rem;
   font-size: 0.8rem;
 }
