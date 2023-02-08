@@ -11,13 +11,14 @@
     <title>Order</title>
   </head>
   <body>
-    <section>
+    <h1>Order Details</h1>
+    <div class="order-single">
       <p>Name: <small>{{ order.customer_name }}</small></p>
       <p>Date: <small>{{ order.order_date }}</small></p>
       <p>Quantity: <small>{{ order.quantity }}</small></p>
       <p>
         Book: <small>{{ order.book.title }}, {{ order.book.author }}</small>
       </p>
-    </section>
+    </div>
   </body>
 </html>
