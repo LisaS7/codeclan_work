@@ -58,7 +58,7 @@ th, td {
     white-space: nowrap;
 }
 
-td:nth-child(3) {text-align: center;}
+td:nth-child(3), td:nth-child(6)  {text-align: center;}
 
 /* ----- FORM ----- */
 
@@ -67,10 +67,14 @@ form {
     width: 30%;
 }
 
+input {
+    padding: 0.7rem;
+}
+
 input[type=submit] {
     margin-top: 2rem;
     width: 6rem;
-    padding: 0.4rem;
+    padding: 0.6rem;
     background-color: #aad1d1;
     border-radius: 0.3rem;
     border: none;

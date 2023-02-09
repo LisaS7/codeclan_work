@@ -23,12 +23,14 @@ def add_event():
     event_number_of_guests = request.form["number_of_guests"]
     event_room = request.form["room"]
     event_description = request.form["description"]
+    event_recurring = request.form["recurring"]
     new_event = Event(
         formatted_date,
         event_title,
         event_number_of_guests,
         event_room,
         event_description,
+        event_recurring,
     )
     add_new_event(new_event)
     return redirect("/events")

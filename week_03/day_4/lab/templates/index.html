@@ -10,6 +10,7 @@
         <th>Number of Guests</th>
         <th>Room</th>
         <th>Description</th>
+        <th>Recurring</th>
       </tr>
     </thead>
     <tbody>
@@ -20,6 +21,7 @@
         <td>{{ event.number_of_guests }}</td>
         <td>{{ event.room }}</td>
         <td>{{ event.description }}</td>
+        <td>{% if event.recurring %} &#9745; {% endif %}</td>
       </tr>
       {% endfor %}
     </tbody>
