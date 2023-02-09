@@ -8,7 +8,8 @@
   </head>
   <body>
     <ul>
-      <li><a href="/tasks">Home</a></li>
+      <li><a href="{{ url_for('index') }}">Home</a></li>
+      <li><a href="{{ url_for('new_task') }}">New Task</a></li>
     </ul>
     {% block content %} {% endblock %}
   </body>
