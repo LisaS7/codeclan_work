@@ -8,10 +8,13 @@
     <title>{{title}} - My To-Do List</title>
   </head>
   <body>
-    <ul>
-      <li><a href="{{ url_for('index') }}">Home</a></li>
-      <li><a href="{{ url_for('new_task') }}">New Task</a></li>
-    </ul>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('new_task') }}">New Task</a></li>
+      </ul>
+    </nav>
+
     {% block content %} {% endblock %}
   </body>
 </html>
