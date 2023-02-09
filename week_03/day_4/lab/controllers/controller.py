@@ -9,14 +9,24 @@ def index():
 
 
 @app.route("/events/new")
-def event():
+def new_event():
     return render_template("new.html", title="New Event")
 
 
 @app.route("/events", methods=["POST"])
 def add_event():
+    event_date = request.form["date"]
     event_title = request.form["title"]
-    event_desc = request.form["description"]
-    new_event = Event(event_title, event_desc, False)
+    event_number_of_guests = request.form["number_of_guests"]
+    event_room = request.form["room"]
+    event_description = request.form["description"]
+    new_event = Event(
+        event_date,
+        event_title,
+        event_number_of_guests,
+        event_room,
+        event_description,
+        False,
+    )
     add_new_event(new_event)
     return redirect("/events")
