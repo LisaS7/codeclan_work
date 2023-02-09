@@ -1,15 +1,12 @@
-<html>
-    <head>
-        <title>{{ title }} - My To-Do List</title>
-    </head>
-    <body>
-        <h1>My Todo List!</h1>
-        {% for task in tasks %}  
-        <div>
-          <p>
-            {{ task.title }}: <b>{{ task.description }}</b>
-          </p>
-        </div>
-        {% endfor %}
-    </body>
-</html>
+{% extends "base.html" %} {% block content %}
+<h1>My Todo List!</h1>
+{% for task in tasks %}
+<div>
+  <p>
+    {{ task.title }}: <b>{{ task.description }}</b>
+    {% if task.done %}
+    <span>&#9989;</span>
+    {% endif %}
+  </p>
+</div>
+{% endfor %} {% endblock %}
