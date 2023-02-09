@@ -11,6 +11,7 @@
         <th>Room</th>
         <th>Description</th>
         <th>Recurring</th>
+        <th>Delete</th>
       </tr>
     </thead>
     <tbody>
@@ -22,6 +23,16 @@
         <td>{{ event.room }}</td>
         <td>{{ event.description }}</td>
         <td>{% if event.recurring %} &#9745; {% endif %}</td>
+        <td>
+          <form action="{{ url_for('delete', event=event) }}" method="post">
+            <input
+              type="hidden"
+              value="{{events.index(event)}}"
+              name="delete"
+            />
+            <input class="delete_button" type="submit" value="&#10006;" />
+          </form>
+        </td>
       </tr>
       {% endfor %}
     </tbody>

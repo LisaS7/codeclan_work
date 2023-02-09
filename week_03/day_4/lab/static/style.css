@@ -59,6 +59,14 @@ th, td {
 }
 
 td:nth-child(3), td:nth-child(6)  {text-align: center;}
+td:nth-child(6) {font-size: 3rem;}
+
+.delete-button {
+    margin-top: 2rem;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+    border: none;
+}
 
 /* ----- FORM ----- */
 
@@ -71,7 +79,7 @@ input {
     padding: 0.7rem;
 }
 
-input[type=submit] {
+.button {
     margin-top: 2rem;
     width: 6rem;
     padding: 0.6rem;
@@ -79,6 +87,7 @@ input[type=submit] {
     border-radius: 0.3rem;
     border: none;
 }
+
 
 label {
     margiN: 1rem 0;
