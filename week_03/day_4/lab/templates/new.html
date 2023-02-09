@@ -1,8 +1,14 @@
 {% extends 'base.html' %} {% block content %}
 <h1>Create new event</h1>
 <form action="{{ url_for('index') }}" method="post">
-  <label for="title">Title: </label>
+  <label for="date">Date: </label>
+  <input type="date" id="date" name="date" />
+  <label for="title">Event name: </label>
   <input type="text" id="title" name="title" />
+  <label for="number_of_guests">Number of guests: </label>
+  <input type="text" id="number_of_guests" name="number_of_guests" />
+  <label for="room">Room: </label>
+  <input type="text" id="room" name="room" />
   <label for="description">Description: </label>
   <textarea name="description" id="description" cols="30" rows="3"></textarea>
   <input type="submit" />
