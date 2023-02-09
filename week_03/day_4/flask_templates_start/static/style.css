@@ -42,7 +42,6 @@ nav a {
 table {
     margin: 2rem;
     box-shadow: 0.1rem 0.1rem 2rem 0 #5c5c5c3c;
-    border-radius: 0.5rem;
     border-collapse: collapse;
 }
 
