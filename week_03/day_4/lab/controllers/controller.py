@@ -1,22 +1,22 @@
 from flask import render_template, request, redirect
 from app import app
-from models.todo_list import tasks, Task, add_new_task
+from models.event_list import events, Event, add_new_event
 
 
-@app.route("/tasks")
+@app.route("/events")
 def index():
-    return render_template("index.html", title="Home", tasks=tasks)
+    return render_template("index.html", title="Home", events=events)
 
 
-@app.route("/tasks/new")
-def new_task():
-    return render_template("new.html", title="New Task")
+@app.route("/events/new")
+def event():
+    return render_template("new.html", title="New Event")
 
 
-@app.route("/tasks", methods=["POST"])
-def add_task():
-    task_title = request.form["title"]
-    task_desc = request.form["description"]
-    new_task = Task(task_title, task_desc, False)
-    add_new_task(new_task)
-    return redirect("/tasks")
+@app.route("/events", methods=["POST"])
+def add_event():
+    event_title = request.form["title"]
+    event_desc = request.form["description"]
+    new_event = Event(event_title, event_desc, False)
+    add_new_event(new_event)
+    return redirect("/events")

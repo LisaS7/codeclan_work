@@ -11,12 +11,12 @@
       </tr>
     </thead>
     <tbody>
-      {% for task in tasks %}
+      {% for event in events %}
       <tr>
-        <td>{{ task.title }}</td>
-        <td>{{ task.description }}</td>
+        <td>{{ event.title }}</td>
+        <td>{{ event.description }}</td>
         <td>
-          {% if task.done %}
+          {% if event.done %}
           <span>&#9989;</span>
           {% endif %}
         </td>
