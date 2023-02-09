@@ -43,7 +43,7 @@
           </tr>
         </table>
 
-        <a href="{{ url_for('order', index=loop.index-1) }}">Details</a>
+        <a href="{{ url_for('order', index=orders.index(order)) }}">Details</a>
       </div>
       {% endfor %}
     </div>
