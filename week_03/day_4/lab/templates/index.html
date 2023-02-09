@@ -22,15 +22,15 @@
         <td>{{ event.number_of_guests }}</td>
         <td>{{ event.room }}</td>
         <td>{{ event.description }}</td>
-        <td>{% if event.recurring %} &#9745; {% endif %}</td>
+        <td>{% if event.recurring %} &#10003; {% else %} - {% endif %}</td>
         <td>
-          <form action="{{ url_for('delete', event=event) }}" method="post">
+          <form action="/events/delete" method="post">
             <input
               type="hidden"
               value="{{events.index(event)}}"
               name="delete"
             />
-            <input class="delete_button" type="submit" value="&#10006;" />
+            <input class="delete_button" type="submit" value="&#9587;" />
           </form>
         </td>
       </tr>

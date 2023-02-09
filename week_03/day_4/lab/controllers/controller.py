@@ -38,9 +38,8 @@ def add_event():
     return redirect("/events")
 
 
-@app.route("/events/delete/<event>", methods=["POST"])
-def delete(event):
-    print(f"+++++++++++++++{request.form}")
+@app.route("/events/delete/", methods=["POST"])
+def delete():
     index_to_delete = int(request.form["delete"])
     delete_event(index_to_delete)
     return redirect("/events")
