@@ -15,6 +15,7 @@ body {
     width: 80%;
     margin: auto;
     font-family: 'Rubik', sans-serif;
+    background-color: var(--light2);
 }
 
 main {
@@ -56,6 +57,10 @@ thead {
     background-color: var(--mid);
 }
 
+tbody {
+    background-color: var(--light);
+}
+
 tbody tr {
     border-bottom: 1px solid var(--dark);
 }
@@ -90,7 +95,7 @@ td:nth-child(4), td:nth-child(5) {
 .card-details {
     display: flex;
     gap: 3rem;
-    color: var(--light2);
+    color: var(--light);
 }
 
 .book-container img {
@@ -119,6 +124,11 @@ td:nth-child(4), td:nth-child(5) {
 
 /* ----- FORM ----- */
 
+.add-book-container {
+    width: 80%;
+    margin: auto;
+}
+
 form {
     display: grid;
     width: 50%;
@@ -126,6 +136,7 @@ form {
 
 input {
     padding: 0.7rem;
+    background-color: var(--light);
 }
 
 button {
@@ -133,7 +144,7 @@ button {
     width: 10rem;
     height: 3rem;
     padding: 0.6rem;
-    background-color: var(--light2);
+    background-color: var(--light);
     border-radius: 0.3rem;
     border: none;
     font-size: 1.3rem;
