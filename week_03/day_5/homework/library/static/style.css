@@ -40,8 +40,14 @@ nav li {
 }
 
 nav a {
+    padding: 1rem;
     text-decoration: none;
     color: var(--light);
+    transition: border-width 1s linear;
+}
+
+nav a:hover {
+    border: 3px solid var(--light2);
 }
 
 
