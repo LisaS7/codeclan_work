@@ -38,16 +38,16 @@ td:nth-child(4) {
     text-align: center;
 }
 
-.material-symbols-outlined {
+.menu-icon {
     color:dimgray;
 }
 
 
 /* ----- SINGLE BOOK CARD ----- */
 
-.book-card {
+.book-container {
     display: flex;
-    gap: 3rem;
+    justify-content: space-between;
     width: 60%;
     margin: auto;
     padding: 3rem;
@@ -55,7 +55,18 @@ td:nth-child(4) {
     border-radius: 0.5rem;
 }
 
-.book-card img {
+.card-details {
+    display: flex;
+    gap: 3rem;
+}
+
+.book-container img {
     width: 8rem;
     box-shadow: 5px 5px 20px;
+}
+
+
+.delete-icon {
+    font-size: 3rem !important;
+    color: lightgray
 }

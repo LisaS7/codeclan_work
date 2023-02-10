@@ -1,14 +1,17 @@
 {% extends 'base.html' %} {% block content %}
 
-<div class="book-card">
-  <img src="{{ url_for('static', filename='images/'+book.image) }}" alt="" />
-
+<div class="book-container">
   <div class="card-details">
-    <h3>{{ book.title }}</h3>
-    <h4>{{ book.author }}</h4>
-    <br />
-    <h4>{{ book.genre }}</h4>
+    <img src="{{ url_for('static', filename='images/'+book.image) }}" alt="" />
+    <section>
+      <h3>{{ book.title }}</h3>
+      <h4>{{ book.author }}</h4>
+      <br />
+      <h4>{{ book.genre }}</h4>
+    </section>
   </div>
-  <a href="/book/delete/{{index}}">&#9587;</a>
+  <a href="/book/delete/{{index}}"
+    ><span class="material-symbols-outlined delete-icon"> delete </span></a
+  >
 </div>
 {% endblock content %}
