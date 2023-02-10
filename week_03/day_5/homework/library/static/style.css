@@ -41,3 +41,21 @@ td:nth-child(4) {
 .material-symbols-outlined {
     color:dimgray;
 }
+
+
+/* ----- SINGLE BOOK CARD ----- */
+
+.book-card {
+    display: flex;
+    gap: 2rem;
+    width: 60%;
+    margin: auto;
+    padding: 3rem;
+    background-color:cadetblue;
+    border-radius: 0.5rem;
+}
+
+.book-card img {
+    width: 7rem;
+    box-shadow: 5px 5px 20px;
+}
