@@ -14,7 +14,10 @@ def add_book():
     title = request.form["title"]
     author = request.form["author"]
     genre = request.form["genre"]
-    book = Book(title, author, genre, "none.jpeg")
+    image = request.form["image"]
+    if not image:
+        image = "none.jpeg"
+    book = Book(title, author, genre, image)
     add_book_to_library(book)
     return redirect("/all-books")
 
