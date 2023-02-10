@@ -23,9 +23,8 @@ def add_event():
     event_number_of_guests = request.form["number_of_guests"]
     event_room = request.form["room"]
     event_description = request.form["description"]
-    event_recurring = False
-    if request.form.get("recurring"):
-        event_recurring = True
+    event_recurring = request.form.get("recurring")
+
     new_event = Event(
         formatted_date,
         event_title,

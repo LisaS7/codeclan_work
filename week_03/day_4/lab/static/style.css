@@ -13,6 +13,7 @@ h1 {
 .content {
     width: 90%;
     margin: auto;
+    padding-top: 2rem;
 }
 
 /* ----- NAV ----- */
@@ -74,7 +75,7 @@ input[type="submit"] {
 
 form {
     display: grid;
-    width: 30%;
+    width: 50%;
 }
 
 input {
@@ -88,11 +89,18 @@ input[type="checkbox"] {
 
 button {
     margin-top: 2rem;
-    width: 6rem;
+    width: 10rem;
+    height: 3rem;
     padding: 0.6rem;
     background-color: #aad1d1;
     border-radius: 0.3rem;
     border: none;
+    font-size: 1.3rem;
+}
+
+.submit-button {
+    display: flex;
+    justify-content: flex-end;
 }
 
 
