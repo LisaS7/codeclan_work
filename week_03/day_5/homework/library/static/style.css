@@ -47,7 +47,7 @@ td:nth-child(4) {
 
 .book-card {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     width: 60%;
     margin: auto;
     padding: 3rem;
@@ -56,6 +56,6 @@ td:nth-child(4) {
 }
 
 .book-card img {
-    width: 7rem;
+    width: 8rem;
     box-shadow: 5px 5px 20px;
 }

@@ -15,4 +15,5 @@ def list_books():
 
 @app.route("/book/<index>")
 def single_book(index):
+    index = int(index)
     return render_template("single_book.html", book=all_books[index])
