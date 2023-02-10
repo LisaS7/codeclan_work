@@ -1,4 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+:root {
+    --dark: #4a332d;
+    --mid: #896b60;
+    --light: #F5f2ea;
+    --light2: #d0c7c2;
+}
+
+.index-page img {
+    max-width: 100%;
+}
+
 
 body {
     width: 80%;
@@ -6,16 +17,14 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
-.background {
- position: relative;
- text-align: center;
-
+main {
+    margin-top: 2rem;
 }
 
 /* ----- NAV ----- */
 
 nav {
-    background-color: #aad1d1;
+    background-color: var(--dark);
     padding: 1rem;
     font-size: 1.2rem;
 }
@@ -31,7 +40,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: aliceblue;
+    color: var(--light);
 }
 
 
@@ -44,11 +53,11 @@ table {
 }
 
 thead {
-    background-color: #85bcbc;
+    background-color: var(--mid);
 }
 
 tbody tr {
-    border-bottom: 1px solid #3a5353;
+    border-bottom: 1px solid var(--dark);
 }
 
 th, td {
@@ -61,7 +70,7 @@ td:nth-child(4) {
 }
 
 .menu-icon {
-    color:dimgray;
+    color:var(--mid);
 }
 
 
@@ -73,13 +82,14 @@ td:nth-child(4) {
     width: 60%;
     margin: auto;
     padding: 3rem;
-    background-color:cadetblue;
+    background-color:var(--dark);
     border-radius: 0.5rem;
 }
 
 .card-details {
     display: flex;
     gap: 3rem;
+    color: var(--light2);
 }
 
 .book-container img {
@@ -90,7 +100,7 @@ td:nth-child(4) {
 
 .delete-icon {
     font-size: 3rem !important;
-    color: lightgray
+    color: var(--light)
 }
 
 /* ----- FORM ----- */
@@ -109,7 +119,7 @@ button {
     width: 10rem;
     height: 3rem;
     padding: 0.6rem;
-    background-color: #aad1d1;
+    background-color: var(--light2);
     border-radius: 0.3rem;
     border: none;
     font-size: 1.3rem;
