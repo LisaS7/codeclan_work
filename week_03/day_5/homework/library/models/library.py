@@ -18,7 +18,7 @@ book4 = Book(
 all_books = [book1, book2, book3, book4]
 
 
-def add_book(book):
+def add_book_to_library(book):
     all_books.append(book)
 
 
