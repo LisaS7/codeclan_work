@@ -43,3 +43,10 @@ def delete_book(index):
     book = all_books[int(index)]
     remove_book(book)
     return redirect("/all-books")
+
+
+@app.route("/book/checkout-status/<index>")
+def toggle_checkout(index):
+    book = all_books[int(index)]
+    book.toggle_checkout()
+    return redirect(request.referrer)

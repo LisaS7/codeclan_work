@@ -10,8 +10,18 @@
       <h4>{{ book.genre }}</h4>
     </section>
   </div>
-  <a href="/book/delete/{{index}}"
-    ><span class="material-symbols-outlined delete-icon"> delete </span></a
-  >
+  <div class="card-controls">
+    <a href="/book/checkout-status/{{index}}">
+      {% if book.checked_out %}
+      <span class="material-symbols-outlined details-icon"> close </span>
+      {% else %}<span class="material-symbols-outlined details-icon">
+        done
+      </span>
+      {% endif %}
+    </a>
+    <a href="/book/delete/{{index}}"
+      ><span class="material-symbols-outlined details-icon"> delete </span></a
+    >
+  </div>
 </div>
 {% endblock content %}

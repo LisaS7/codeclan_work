@@ -65,7 +65,7 @@ th, td {
     white-space: nowrap;
 }
 
-td:nth-child(4) {
+td:nth-child(4), td:nth-child(5) {
     text-align: center;
 }
 
@@ -97,8 +97,14 @@ td:nth-child(4) {
     box-shadow: 5px 5px 20px;
 }
 
+.card-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
 
-.delete-icon {
+
+.details-icon {
     font-size: 3rem !important;
     color: var(--light)
 }
