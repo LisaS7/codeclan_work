@@ -6,6 +6,7 @@
       <th>Title</th>
       <th>Author</th>
       <th>Genre</th>
+      <th>Details</th>
     </tr>
   </thead>
   <tbody>
@@ -14,6 +15,11 @@
       <td>{{book.title}}</td>
       <td>{{book.author}}</td>
       <td>{{book.genre}}</td>
+      <td>
+        <a href="{{ url_for('single_book', index=books.index(book)) }}"
+          ><span class="material-symbols-outlined"> menu_book </span></a
+        >
+      </td>
     </tr>
     {% endfor %}
   </tbody>

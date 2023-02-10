@@ -11,3 +11,8 @@ def index():
 @app.route("/all-books")
 def list_books():
     return render_template("all_books.html", books=all_books)
+
+
+@app.route("/book/<index>")
+def single_book(index):
+    return render_template("single_book.html", book=all_books[index])

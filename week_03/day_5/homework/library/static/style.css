@@ -33,3 +33,11 @@ th, td {
     padding: 0.8rem 1.5rem;
     white-space: nowrap;
 }
+
+td:nth-child(4) {
+    text-align: center;
+}
+
+.material-symbols-outlined {
+    color:dimgray;
+}
