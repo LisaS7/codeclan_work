@@ -12,6 +12,28 @@ body {
 
 }
 
+/* ----- NAV ----- */
+
+nav {
+    background-color: #aad1d1;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
 
 /* ----- TABLE ----- */
 
