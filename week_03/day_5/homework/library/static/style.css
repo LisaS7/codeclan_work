@@ -80,6 +80,7 @@ td:nth-child(4), td:nth-child(5) {
     display: flex;
     justify-content: space-between;
     width: 60%;
+    max-width: 600px;
     margin: auto;
     padding: 3rem;
     background-color:var(--dark);
@@ -103,9 +104,16 @@ td:nth-child(4), td:nth-child(5) {
     gap: 3rem;
 }
 
+.card-controls a {
+    display: flex;
+    align-items: center;
+    color: var(--light);
+    text-decoration: none;
+    font-size: 0.7rem;
+}
+
 
 .details-icon {
-    font-size: 3rem !important;
     color: var(--light)
 }
 
