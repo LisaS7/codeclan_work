@@ -2,7 +2,10 @@
 
 <div class="book-container">
   <div class="card-details">
-    <img src="{{ url_for('static', filename='images/'+book.image) }}" alt="" />
+    <img
+      src="{{ url_for('static', filename='images/book_covers/'+book.image) }}"
+      alt=""
+    />
     <section>
       <h3>{{ book.title }}</h3>
       <h4>{{ book.author }}</h4>

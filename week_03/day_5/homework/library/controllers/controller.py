@@ -2,6 +2,14 @@ from app import app
 from flask import render_template, redirect, request
 from models.library import all_books, add_book_to_library, remove_book
 from models.book import Book
+from pathlib import Path
+
+
+def save_image(image):
+    if not image:
+        image = "none.jpeg"
+    else:
+        image.save(Path("./static/images/book_covers") / image.filename)
 
 
 @app.route("/")
@@ -14,11 +22,13 @@ def add_book():
     title = request.form["title"]
     author = request.form["author"]
     genre = request.form["genre"]
-    image = request.form["image"]
-    if not image:
-        image = "none.jpeg"
-    book = Book(title, author, genre, image)
+
+    image = request.files["image"]
+    save_image(image)
+
+    book = Book(title, author, genre, image.filename)
     add_book_to_library(book)
+
     return redirect("/all-books")
 
 
