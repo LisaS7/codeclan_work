@@ -2,14 +2,13 @@ from app import app
 from flask import render_template, redirect, request
 from models.library import all_books, add_book_to_library, remove_book
 from models.book import Book
-from pathlib import Path
 
 
 def save_image(image):
     if not image:
         image = "none.jpeg"
     else:
-        image.save(Path("./static/images/book_covers") / image.filename)
+        image.save("./static/images/book_covers/" + image.filename)
 
 
 @app.route("/")
