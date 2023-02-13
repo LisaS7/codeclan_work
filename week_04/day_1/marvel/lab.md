@@ -169,7 +169,8 @@ UPDATE movies
 SET show_time = TO_CHAR((
 	SELECT TO_TIMESTAMP(show_time, 'HH24:MI')::TIME + interval '2 hour'
 	FROM movies
-	WHERE title = 'Iron Man 2'), 'HH24:MI');
+	WHERE title = 'Iron Man 2'), 'HH24:MI')
+WHERE title = 'Iron Man 3';
 ```
 
 ## Extension
