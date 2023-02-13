@@ -49,3 +49,33 @@ INSERT INTO movies (title, year, show_time) VALUES ('Guardians of the Galaxy 2',
 INSERT INTO movies (title, year, show_time) VALUES ('Spider-Man: Homecoming', 2017, '23:00');
 INSERT INTO movies (title, year, show_time) VALUES ('Thor: Ragnarok', 2017, '22:10');
 INSERT INTO movies (title, year, show_time) VALUES ('Black Panther', 2018, '21:00');
+
+
+UPDATE people SET name = 'Krusty the Clown' WHERE name = 'Crusty the Clown';
+DELETE FROM movies WHERE title = 'Batman Begins';
+INSERT INTO people (name) VALUES ('Bart Simpson');
+DELETE FROM people WHERE name = 'Eric Cartman';
+INSERT INTO movies (title, year, show_time) VALUES ('Avengers: Infinity War', 2018, '00:00');
+
+
+-- The cinema would like to make the Iron Man movies a triple billing. 
+-- Find out the show time of "Iron Man 2" and set the show time of "Iron Man 3" to start two hours later.
+SELECT * FROM movies WHERE title = 'Iron Man 3';
+
+UPDATE movies 
+SET show_time = TO_CHAR((
+	SELECT TO_TIMESTAMP(show_time, 'HH24:MI')::TIME + interval '2 hour' 
+	FROM movies 
+	WHERE title = 'Iron Man 2'), 'HH24:MI');
+
+SELECT * FROM movies WHERE title = 'Iron Man 3';
+
+
+
+-- Extension
+-- Research how to delete multiple entries from your table in a single command.
+
+
+-- SELECT * FROM movies;
+DELETE FROM people WHERE name LIKE '%Simpson';
+SELECT * FROM people;
