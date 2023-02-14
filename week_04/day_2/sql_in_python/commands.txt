@@ -1,0 +1,7 @@
+createdb task_manager
+psql -d task_manager -f db/task_manager.sql
+
+pip3 install psycopg2
+
+# if that doesn't work try...
+pip3 install psycopg2-binary
