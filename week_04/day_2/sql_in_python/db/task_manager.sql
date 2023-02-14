@@ -8,8 +8,8 @@ CREATE TABLE tasks (
   completed BOOLEAN DEFAULT FALSE
 );
 
-INSERT INTO tasks (description, assignee, duration) 
-VALUES ('Walk Dog', 'Jack Jarvia', 60);
+-- INSERT INTO tasks (description, assignee, duration) 
+-- VALUES ('Walk Dog', 'Jack Jarvia', 60);
 
-INSERT INTO tasks (description, assignee, duration) 
-VALUES ('Feed Cat', 'Victor McDade', 5);
+-- INSERT INTO tasks (description, assignee, duration) 
+-- VALUES ('Feed Cat', 'Victor McDade', 5);
