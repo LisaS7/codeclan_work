@@ -27,7 +27,7 @@ def add_book():
         save_image(image)
 
         book = Book(title, author, genre, image.filename)
-        add_book_to_library(book)
+        # add_book_to_library(book)
 
         return redirect("/all-books")
 

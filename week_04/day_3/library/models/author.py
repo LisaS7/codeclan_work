@@ -1,7 +1,4 @@
-from dataclasses import dataclass
-
-
-@dataclass
 class Author:
-    id: int
-    name: str
+    def __init__(self, name, id=None):
+        self.id = id
+        self.name = name
