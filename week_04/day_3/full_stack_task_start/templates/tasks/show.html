@@ -5,6 +5,6 @@
   <p>{{ task.user.first_name }}</p>
   <p>{{ task.duration}} mins</p>
   <p>Completed? {{ task.completed }}</p>
-  <p></p>
+  <p><a href="/tasks/edit/{{task.id}}">Edit</a></p>
 </div>
 {% endblock content %}

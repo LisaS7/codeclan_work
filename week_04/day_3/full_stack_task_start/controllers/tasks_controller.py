@@ -45,9 +45,24 @@ def show_task(id):
 
 # EDIT
 # GET '/tasks/<id>/edit'
-
 # UPDATE
 # PUT '/tasks/<id>'
+@tasks_blueprint.route("/tasks/edit/<id>", methods=["GET", "POST"])
+def edit_task(id):
+    if request.method == "POST":
+        description = request.form["description"]
+        user_id = request.form["user_id"]
+        duration = request.form["duration"]
+        completed = request.form["completed"]
+
+        user = user_repository.select(user_id)
+        task = Task(description, user, duration, completed, id)
+        task_repository.update(task)
+        return redirect("/tasks")
+    users = user_repository.select_all()
+    task = task_repository.select(id)
+    return render_template("tasks/edit.html", all_users=users, task=task)
+
 
 # DELETE
 # DELETE '/tasks/<id>'
