@@ -16,19 +16,23 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/", methods=["POST"])
+@app.route("/new", methods=["GET", "POST"])
 def add_book():
-    title = request.form["title"]
-    author = request.form["author"]
-    genre = request.form["genre"]
 
-    image = request.files["image"]
-    save_image(image)
+    if request.method == "POST":
+        title = request.form["title"]
+        author = request.form["author"]
+        genre = request.form["genre"]
 
-    book = Book(title, author, genre, image.filename)
-    add_book_to_library(book)
+        image = request.files["image"]
+        save_image(image)
 
-    return redirect("/all-books")
+        book = Book(title, author, genre, image.filename)
+        add_book_to_library(book)
+
+        return redirect("/all-books")
+    else:
+        return render_template("add_book.html")
 
 
 @app.route("/all-books")
