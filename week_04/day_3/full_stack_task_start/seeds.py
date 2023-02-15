@@ -1,4 +1,3 @@
-import pdb
 from models.task import Task
 from models.user import User
 
@@ -20,6 +19,3 @@ task_repository.save(task_1)
 
 task_2 = Task("Go for a run", user1, 30, True)
 task_repository.save(task_2)
-
-
-pdb.set_trace()
