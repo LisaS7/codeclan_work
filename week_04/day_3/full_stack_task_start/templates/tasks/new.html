@@ -35,7 +35,6 @@
     <label for="user">User:</label>
     <select id="user" name="user_id">
       {% for user in all_users %}
-
       <option value="{{user.id}}">
         {{user.first_name}} {{ user.last_name }}
       </option>

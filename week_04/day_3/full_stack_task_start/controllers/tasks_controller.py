@@ -1,5 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect
 from repositories import task_repository, user_repository
+from models.task import Task
 
 from flask import Blueprint
 
@@ -9,10 +10,20 @@ tasks_blueprint = Blueprint("tasks", __name__)
 
 # INDEX
 # GET '/tasks'
-@tasks_blueprint.route("/tasks")
+@tasks_blueprint.route("/tasks", methods=["GET", "POST"])
 def tasks():
-    tasks = task_repository.select_all()  # NEW
+    if request.method == "POST":
+        description = request.form["description"]
+        user_id = request.form["user_id"]
+        duration = request.form["duration"]
+        completed = request.form["completed"]
 
+        user = user_repository.select(user_id)
+        task = Task(description, user, duration, completed)
+        task_repository.save(task)
+        return redirect("/tasks")
+
+    tasks = task_repository.select_all()
     return render_template("tasks/index.html", all_tasks=tasks)
 
 
