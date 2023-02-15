@@ -49,3 +49,7 @@ def new_task():
 
 # DELETE
 # DELETE '/tasks/<id>'
+@tasks_blueprint.route("/tasks/delete/<id>", methods=["POST"])
+def delete(id):
+    task_repository.delete(id)
+    return redirect("/tasks")
