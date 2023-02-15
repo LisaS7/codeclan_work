@@ -3,7 +3,7 @@
   <div class="content">
     {{task.user.first_name}}
     <div class="description">
-      {{task.description}}
+      <a href="/tasks/{{task.id}}">{{task.description}}</a>
       <span class="duration">{{task.duration}} mins</span>
     </div>
     <div class="buttons">

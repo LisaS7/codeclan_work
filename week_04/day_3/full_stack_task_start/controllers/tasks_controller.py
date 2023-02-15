@@ -9,7 +9,7 @@ tasks_blueprint = Blueprint("tasks", __name__)
 # RESTful CRUD Routes
 
 # INDEX
-# GET '/tasks'
+# GET '/tasks' # POST '/tasks'
 @tasks_blueprint.route("/tasks", methods=["GET", "POST"])
 def tasks():
     if request.method == "POST":
@@ -35,11 +35,13 @@ def new_task():
     return render_template("tasks/new.html", all_users=users)
 
 
-# CREATE
-# POST '/tasks'
-
 # SHOW
 # GET '/tasks/<id>'
+@tasks_blueprint.route("/tasks/<id>")
+def show_task(id):
+    task = task_repository.select(id)
+    return render_template("tasks/show.html", task=task)
+
 
 # EDIT
 # GET '/tasks/<id>/edit'
@@ -50,6 +52,6 @@ def new_task():
 # DELETE
 # DELETE '/tasks/<id>'
 @tasks_blueprint.route("/tasks/delete/<id>", methods=["POST"])
-def delete(id):
+def delete_task(id):
     task_repository.delete(id)
     return redirect("/tasks")
