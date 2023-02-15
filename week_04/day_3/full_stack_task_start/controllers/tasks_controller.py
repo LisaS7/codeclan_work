@@ -11,12 +11,16 @@ tasks_blueprint = Blueprint("tasks", __name__)
 # GET '/tasks'
 @tasks_blueprint.route("/tasks")
 def tasks():
-    tasks = task_repository.select_all() # NEW
-    return render_template("tasks/index.html", all_tasks = tasks)
+    tasks = task_repository.select_all()  # NEW
+    return render_template("tasks/index.html", all_tasks=tasks)
 
 
 # NEW
 # GET '/tasks/new'
+@tasks_blueprint.route("/tasks/new")
+def new_task():
+    return render_template("tasks/new.html")
+
 
 # CREATE
 # POST '/tasks'
