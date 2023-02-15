@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="book-container">
+  <div class="card-details">
+    <img
+      src="{{ url_for('static', filename='images/book_covers/'+book.image) }}"
+      alt=""
+    />
+    <section>
+      <h3>{{ book.title }}</h3>
+      <h4>{{ book.author }}</h4>
+      <br />
+      <h4>{{ book.genre }}</h4>
+    </section>
+  </div>
+  <div class="card-controls">
+    <div>
+      <a href="/book/checkout/{{index}}">
+        {% if book.checked_out %}
+        <span class="material-symbols-outlined details-icon"> close </span
+        >Unavailable {% else %}<span
+          class="material-symbols-outlined details-icon"
+        >
+          done
+        </span>
+        Available {% endif %}
+      </a>
+    </div>
+
+    <a href="/book/delete/{{index}}"
+      ><span class="material-symbols-outlined details-icon"> delete </span></a
+    >
+  </div>
+</div>
+{% endblock content %}

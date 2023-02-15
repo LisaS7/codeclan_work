@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+:root {
+    --dark: #4a332d;
+    --mid: #896b60;
+    --light: #F5f2ea;
+    --light2: #d0c7c2;
+}
+
+.index-page img {
+    max-width: 100%;
+}
+
+
+body {
+    width: 80%;
+    margin: auto;
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--light2);
+}
+
+main {
+    margin-top: 2rem;
+}
+
+/* ----- NAV ----- */
+
+nav {
+    background-color: var(--dark);
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--light);
+    transition: border-width 1s linear;
+}
+
+nav a:hover {
+    border: 3px solid var(--light2);
+}
+
+
+/* ----- TABLE ----- */
+
+table {
+    margin: 2rem;
+    box-shadow: 0.1rem 0.1rem 2rem 0 #5c5c5c3c;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: var(--mid);
+}
+
+tbody {
+    background-color: var(--light);
+}
+
+tbody tr {
+    border-bottom: 1px solid var(--dark);
+}
+
+th, td {
+    padding: 0.8rem 1.5rem;
+    white-space: nowrap;
+}
+
+td:nth-child(4), td:nth-child(5) {
+    text-align: center;
+}
+
+.menu-icon {
+    color:var(--mid);
+}
+
+
+/* ----- SINGLE BOOK CARD ----- */
+
+.book-container {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    max-width: 600px;
+    margin: auto;
+    padding: 3rem;
+    background-color:var(--dark);
+    border-radius: 0.5rem;
+}
+
+.card-details {
+    display: flex;
+    gap: 3rem;
+    color: var(--light);
+}
+
+.book-container img {
+    width: 8rem;
+    box-shadow: 5px 5px 20px;
+}
+
+.card-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.card-controls a {
+    display: flex;
+    align-items: center;
+    color: var(--light);
+    text-decoration: none;
+    font-size: 0.7rem;
+}
+
+
+.details-icon {
+    color: var(--light)
+}
+
+/* ----- FORM ----- */
+
+.add-book-container {
+    width: 80%;
+    margin: auto;
+}
+
+form {
+    display: grid;
+    width: 50%;
+}
+
+input {
+    padding: 0.7rem;
+    background-color: var(--light);
+}
+
+button {
+    margin-top: 2rem;
+    width: 10rem;
+    height: 3rem;
+    padding: 0.6rem;
+    background-color: var(--light);
+    border-radius: 0.3rem;
+    border: 1px solid var(--dark);
+    font-size: 1.3rem;
+}
+
+.submit-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+label {
+    margin: 1rem 0;
+}

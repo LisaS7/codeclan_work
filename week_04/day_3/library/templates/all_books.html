@@ -1,0 +1,39 @@
+{% extends 'base.html' %} {% block content %}
+<h2>All Books</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Genre</th>
+      <th>Details</th>
+      <th>Availablity<br /><small>(click to toggle)</small></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for book in books %}
+    <tr>
+      <td>{{book.title}}</td>
+      <td>{{book.author}}</td>
+      <td>{{book.genre}}</td>
+      <td>
+        <a href="{{ url_for('single_book', index=loop.index0) }}"
+          ><span class="material-symbols-outlined menu-icon">
+            menu_book
+          </span></a
+        >
+      </td>
+      <td>
+        <a href="/book/checkout/{{loop.index0}}">
+          {% if book.checked_out %}
+          <span class="material-symbols-outlined"> close </span>
+          {% else %}<span class="material-symbols-outlined"> done </span> {%
+          endif %}
+        </a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock content %}
