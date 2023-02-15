@@ -1,7 +1,10 @@
+from dataclasses import dataclass
+
+
+@dataclass
 class Artist:
-    def __init__(self, name, id=None):
-        self.id = id
-        self.name = name
+    name: str
+    id: int = None
 
     def __repr__(self):
         return f"Artist: {self.name}"

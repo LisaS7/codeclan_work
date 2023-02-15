@@ -6,4 +6,4 @@ class Album:
         self.artist = artist
 
     def __repr__(self):
-        return f"id: {self.id}, title: {self.title}, genre: {self.genre}, artist: {self.artist.name}"
+        return f"id: {self.id}\ntitle: {self.title}\ngenre: {self.genre}\nartist: {self.artist.name}\n"

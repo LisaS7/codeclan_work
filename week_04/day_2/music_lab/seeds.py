@@ -25,11 +25,17 @@ album_repository.save(album4)
 
 
 # pdb.set_trace()
-for album in artist_repository.albums(artist1):
-    print(album)
+# for album in artist_repository.albums(artist1):
+#     print(album)
 
-# for artist in artist_repository.select_all():
-#     print(artist)
+for artist in artist_repository.select_all():
+    print(artist)
 
 # for album in album_repository.select_all():
 #     print(album)
+
+
+artist_1 = Artist("Stone Sour")
+artist_2 = Artist("Stone Sour")
+
+print((artist_1 == artist_2))
