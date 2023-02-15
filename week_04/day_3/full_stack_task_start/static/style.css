@@ -46,6 +46,7 @@ input, select, button {
 .trash-button{
   display: contents;
   font-size: 65%;
+  cursor: pointer;
 }
 
 
