@@ -34,7 +34,12 @@
   <div>
     <label for="user">User:</label>
     <select id="user" name="user_id">
-      <!-- TODO -->
+      {% for user in all_users %}
+
+      <option value="{{user.id}}">
+        {{user.first_name}} {{ user.last_name }}
+      </option>
+      {% endfor %}
     </select>
   </div>
 
