@@ -13,4 +13,5 @@ def users():
 @users_blueprint.route("/users/<id>")
 def show(id):
     user = user_repository.select(id)
-    return render_template("users/show.html", user=user)
+    locations = user_repository.locations(id)
+    return render_template("users/show.html", user=user, locations=locations)

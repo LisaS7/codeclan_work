@@ -39,10 +39,10 @@ def delete_all():
 
 def users(id):
     users = []
-    sql = """SELECT users.* FROM users
-            INNER JOIN visits
-            ON visits.user_id = users.id
-            WHERE visits.location_id = %s"""
+    sql = """SELECT u.* FROM users AS u
+            INNER JOIN visits AS v
+            ON v.user_id = u.id
+            WHERE v.location_id = %s"""
     values = [id]
     results = run_sql(sql, values)
 
