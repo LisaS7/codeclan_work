@@ -19,3 +19,5 @@ CREATE TABLE visits (
   location_id INT NOT NULL REFERENCES locations(id) ON DELETE CASCADE,
   review TEXT
 );
+
+

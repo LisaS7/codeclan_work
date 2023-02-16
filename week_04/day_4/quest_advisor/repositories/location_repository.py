@@ -36,3 +36,17 @@ def select(id):
 def delete_all():
     sql = "DELETE FROM locations"
     run_sql(sql)
+
+def users(id):
+    users = []
+    sql = """SELECT users.* FROM users
+            INNER JOIN visits
+            ON visits.user_id = users.id
+            WHERE visits.location_id = %s"""
+    values = [id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        user = User(row["name"], row["id"])
+        users.append(user)
+    return users
