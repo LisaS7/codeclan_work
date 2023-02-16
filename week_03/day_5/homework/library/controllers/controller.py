@@ -25,6 +25,7 @@ def add_book():
         genre = request.form["genre"]
 
         image = request.files["image"]
+        print(type(image))
         save_image(image)
 
         book = Book(title, author, genre, image.filename)
