@@ -1,14 +1,15 @@
 import psycopg2
 import psycopg2.extras as ext
-import config
+import os
 
+DB_NAME = os.environ["DB_NAME"]
 
 def run_sql(sql, values=None):
     conn = None
     results = []
 
     try:
-        conn = psycopg2.connect(f"dbname='{config.DB_NAME}'")
+        conn = psycopg2.connect(f"dbname='{DB_NAME}'")
         cur = conn.cursor(cursor_factory=ext.DictCursor)
         cur.execute(sql, values)
         conn.commit()
