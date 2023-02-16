@@ -1,6 +1,10 @@
 from db.run_sql import run_sql
+
 TABLE_NAME = "??"
 FIELDS = "X, X, X"
+
+number_of_fields = len(FIELDS.split(","))
+placeholders = ", ".join(["%s"] * number_of_fields)
 
 # import model
 # correct number of %s in sql queries to match fields
@@ -43,13 +47,13 @@ def delete(id):
 
 def save(task):
     sql = f"""INSERT INTO {TABLE_NAME} ({FIELDS}) 
-            VALUES (%s, %s, %s, %s) RETURNING *"""
+            VALUES ({placeholders}) RETURNING *"""
     values = []
     result = run_sql(sql, values)
     # set id on object ## task.id = result[0]["id"]
 
 
 def update(task):
-    sql = f"""UPDATE {TABLE_NAME} SET ({FIELDS}) = (%s, %s, %s, %s) WHERE id = %s"""
+    sql = f"""UPDATE {TABLE_NAME} SET ({FIELDS}) = ({placeholders}) WHERE id = %s"""
     values = []
     run_sql(sql, values)
