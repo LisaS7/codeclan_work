@@ -41,6 +41,6 @@ book3 = Book(
 )
 book_repository.save(book3)
 
-for book in book_repository.select_all():
-    print(book)
+for author in author_repository.select_all():
+    print(author)
 # save books
