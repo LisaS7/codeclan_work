@@ -1,0 +1,32 @@
+Debugging & Effective Text Editing Quiz
+
+1. Name 2 ways you can write your code to minimise bugs
+ - Indentation
+ - Good variable names, good function names 
+
+2. How many responsibilities should an ideal method/function have?
+  - Just one
+
+3. What steps do you take when reading an error message?
+   - Find the line number, read error meesage, file name
+
+4. What are the top things you should do when Googling for a solution?
+   - Be specfific, don't rely on the first answer, paste the entire error message
+
+5. What is Rubber Ducking?
+ - Talking about the problem aloud
+
+6. What's the difference between an IDE and a text editor?
+ - IDE is built for specific language has more functionality. Text editor is more general, lighter. 
+
+7. What's the shortcut for opening the Command Palette in Atom?
+ - cmd + shift + p
+
+8. What's the shortcut for copying the current line onto the next line?
+  - cmd + shift + d
+
+9. What's the shortcut for moving a line of code up and down?
+   - cmd + ctrl + arrows
+
+10. How many of your hands should you have on the keyboard at all times?
+ - All of them
