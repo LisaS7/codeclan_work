@@ -26,4 +26,10 @@ describe("Paint", function () {
     const expected = true;
     strictEqual(actual, expected);
   });
+  it("Should be able to reduce litres by amount used", function () {
+    paint.use(5);
+    const actual = paint.litres;
+    const expected = 7;
+    strictEqual(actual, expected);
+  });
 });

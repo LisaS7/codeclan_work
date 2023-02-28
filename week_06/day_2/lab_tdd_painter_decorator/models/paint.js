@@ -8,6 +8,9 @@ class Paint {
   empty() {
     this.litres = 0;
   }
+  use(litres) {
+    this.litres -= litres;
+  }
 }
 
 export default Paint;
