@@ -1,7 +1,9 @@
-const Dinosaur = function (species, diet, guestsAttractedPerDay) {
-  this.species = species;
-  this.diet = diet;
-  this.guestsAttractedPerDay = guestsAttractedPerDay;
+class Dinosaur {
+  constructor(species, diet, guestsAttractedPerDay) {
+    this.species = species;
+    this.diet = diet;
+    this.guestsAttractedPerDay = guestsAttractedPerDay;
+  }
 }
 
-module.exports = Dinosaur;
+export default Dinosaur;
