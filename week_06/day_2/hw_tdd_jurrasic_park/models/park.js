@@ -8,7 +8,7 @@ class Park {
     this.dinos.push(dino);
   }
   removeDino(dino) {
-    index = this.dinos.indexOf(dino);
+    let index = this.dinos.indexOf(dino);
     if (index > -1) {
       this.dinos.splice(index, 1);
     }
@@ -51,4 +51,4 @@ class Park {
   }
 }
 
-export default Park;
+module.exports = Park;

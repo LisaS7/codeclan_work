@@ -1,5 +1,5 @@
-import { strictEqual } from "assert";
-import Dinosaur from "../models/dinosaur.js";
+const assert = require("assert");
+const Dinosaur = require("../models/dinosaur.js");
 
 describe("Dinosaur", function () {
   let dinosaur;
@@ -10,16 +10,16 @@ describe("Dinosaur", function () {
 
   it("should have a species", function () {
     const actual = dinosaur.species;
-    strictEqual(actual, "t-rex");
+    assert.strictEqual(actual, "t-rex");
   });
 
   it("should have a diet", function () {
     const actual = dinosaur.diet;
-    strictEqual(actual, "carnivore");
+    assert.strictEqual(actual, "carnivore");
   });
 
   it("should have an average number of visitors it attracts per day", function () {
     const actual = dinosaur.guestsAttractedPerDay;
-    strictEqual(actual, 50);
+    assert.strictEqual(actual, 50);
   });
 });

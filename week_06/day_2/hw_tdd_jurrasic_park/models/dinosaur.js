@@ -6,4 +6,4 @@ class Dinosaur {
   }
 }
 
-export default Dinosaur;
+module.exports = Dinosaur;
