@@ -44,18 +44,19 @@ describe("Cinema", function () {
     assert.strictEqual(actual, expected);
   });
   it("should be able to filter films by genre", function () {
-    const actual = cinema.filmsByGenre("drama");
+    // const actual = cinema.filmsByGenre("drama");
+    const actual = cinema.filmsByProperty("genre", "drama");
     const expected = [moonlight, trainspotting];
     assert.deepStrictEqual(actual, expected);
   });
   it("should be able to check whether there are some films from a particular year", function () {
-    const actual = cinema.filmsByYear(2017);
-    const expected = [bladeRunner, dunkirk, trainspotting];
+    const actual = cinema.someFilmsByYear(2017);
+    const expected = true;
     assert.deepStrictEqual(actual, expected);
   });
   it("should be able to check whether there are no films from a particular year", function () {
-    const actual = cinema.filmsByYear(2022);
-    const expected = null;
+    const actual = cinema.someFilmsByYear(2022);
+    const expected = false;
     assert.deepStrictEqual(actual, expected);
   });
   it("should be able to check whether all films are over a particular length (false)", function () {
@@ -72,5 +73,10 @@ describe("Cinema", function () {
     const actual = cinema.totalRunTime();
     const expected = 622;
     assert.strictEqual(actual, expected);
+  });
+  it("should be able to filter films by year", function () {
+    const actual = cinema.filmsByProperty("year", 2017);
+    const expected = [bladeRunner, dunkirk, trainspotting];
+    assert.deepStrictEqual(actual, expected);
   });
 });
