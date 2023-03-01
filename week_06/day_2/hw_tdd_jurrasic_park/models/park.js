@@ -32,12 +32,10 @@ class Park {
     return totalVisitors;
   }
   annualVisitors() {
-    const visitorsPerDay = this.dailyVisitors();
-    return visitorsPerDay * 365;
+    return this.dailyVisitors() * 365;
   }
   yearlyRevenue() {
-    const visitors = this.annualVisitors();
-    return visitors * this.ticketPrice;
+    return this.annualVisitors() * this.ticketPrice;
   }
   removeBySpecies(species) {
     this.dinos = this.dinos.filter((dino) => dino.species !== species);
