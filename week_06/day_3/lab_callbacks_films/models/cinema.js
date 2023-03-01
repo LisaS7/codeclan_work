@@ -10,9 +10,9 @@ Cinema.prototype.filmByTitle = function (title) {
   return this.films.find((film) => film.title === title);
 };
 
-Cinema.prototype.filmsByGenre = function (genre) {
-  return this.films.filter((film) => film.genre === genre);
-};
+// Cinema.prototype.filmsByGenre = function (genre) {
+//   return this.films.filter((film) => film.genre === genre);
+// };
 
 Cinema.prototype.someFilmsByYear = function (year) {
   return this.films.some((film) => film.year === year);
