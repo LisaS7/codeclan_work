@@ -7,11 +7,7 @@ function App() {
     { name: "Cheese", isPurchased: true },
     { name: "Jalapenos", isPurchased: false },
   ]);
-  const [newItemName, setNewItemName] = useState();
-
-  const itemElements = items.map((item, index) => {
-    return <li key={index}>{item.name}</li>;
-  });
+  const [newItemName, setNewItemName] = useState("");
 
   function saveNewItem(event) {
     event.preventDefault();
@@ -26,6 +22,26 @@ function App() {
   function handleInputChange(event) {
     setNewItemName(event.target.value);
   }
+
+  function purchaseItem(index) {
+    const newItem = { ...items[index] };
+    newItem.isPurchased = true;
+    const newItems = [...items];
+    newItems[index] = newItem;
+    setItems(newItems);
+  }
+
+  const itemElements = items.map((item, index) => (
+    <li key={index}>
+      <span>{item.name}</span>
+      {/* {item.isPurchased && <span>Purchased</span>} */}
+      {item.isPurchased ? (
+        <span>Purchased</span>
+      ) : (
+        <button onClick={() => purchaseItem(index)}>Purchase</button>
+      )}
+    </li>
+  ));
 
   return (
     <div className="App">
