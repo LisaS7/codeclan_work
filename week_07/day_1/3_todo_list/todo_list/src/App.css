@@ -1,0 +1,95 @@
+.App {
+  text-align: center;
+  padding: 2rem;
+  background-color: #272727;
+  color: darkturquoise;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  gap: 3rem;
+}
+
+form, ul {
+  display: flex;
+  gap: 2rem;
+  background-color: #1e1e1e;
+  border-radius: 30px;
+  padding: 4rem 2rem;
+
+}
+
+form {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+input[type="text"] {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  min-width: 28rem;
+  font-size: 1.3rem;
+  background-color: #191919;
+  color: lightslategrey;
+  border: 1px solid cadetblue;
+}
+
+input[type="radio"] {
+  accent-color: darkturquoise;
+  
+}
+
+fieldset {
+  padding: 1rem;
+  border: 1px solid cadetblue;
+  background-color: #1e1e1e;
+}
+
+label {
+  margin: 1rem;
+}
+
+button {
+  padding: 0.6rem 2rem;
+  background-color: #191919;
+  color: powderblue;
+  font-weight: 600;
+  border: 3px solid cadetblue;
+}
+
+ul {
+  padding: 4rem;
+  list-style: none;
+  flex-direction: column;
+}
+
+li {
+  padding: 1rem 5rem;
+  background-color: #1e1e1e;
+  width: 60%;
+  margin: auto;
+}
+
+.low-priority {
+  border: 1px solid cadetblue;
+}
+
+.high-priority {
+  border: 2px solid mediumvioletred;
+  color: mediumvioletred;
+  font-weight: 600;
+}
+
+
+
