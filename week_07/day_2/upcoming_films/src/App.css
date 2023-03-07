@@ -1,0 +1,59 @@
+.App {
+  margin: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #20262E;
+  color: #E9E8E8;
+}
+
+header, footer, ul {
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  border-top: 1px solid #CD5888;
+  min-width: 40vw;
+}
+
+header, footer {
+  justify-content: center;
+}
+
+img {
+  width: 4rem;
+}
+
+.list-container {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+li {
+  background-color: #27303c;
+  padding: 1rem;
+  font-size: 1.3rem;
+  color: #913175;
+  text-align: left;
+}
+
+li:hover {
+  background-color: #303e4f;
+}
+
+a {
+  color: #e9e8e8;
+  text-decoration: none;
+}
+
+button {
+  padding: 1rem 3rem;
+  background-color: #913175;
+  color: #e9e8e8;
+  border: none;
+}
+
+button:hover {
+  border: 2px solid #cd5888;
+}
+
