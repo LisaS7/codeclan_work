@@ -39,10 +39,11 @@ function App() {
         <form onSubmit={handleSubmit}>
           <input
             type="text"
+            className="form-element"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <fieldset>
+          <fieldset className="form-element">
             <legend>Priority:</legend>
             <label htmlFor="high">High</label>
             <input
@@ -62,7 +63,9 @@ function App() {
             />
           </fieldset>
 
-          <button>Save</button>
+          <button id="save-button" className="form-element">
+            Save
+          </button>
         </form>
         <ul>{listItems}</ul>
       </main>
