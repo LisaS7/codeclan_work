@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+
+* {
+  font-family: 'Titillium Web', sans-serif;
+  color: #A3C7D6;
+  font-size: 1.3rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.comment-box {
+  margin: 3rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  background-color: #18122B;
+  border-radius: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h4 {
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+blockquote p {
+  padding-left: 2rem;
+  margin: 0;
+  font-size: 1rem;
+}
+
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 1rem;
+  border-left: 1px solid #A3C7D6;
+  padding-left: 8rem;
+}
+
+input, button {
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+
+input {
+  color:#231a41;
+}
+
+button {
+  margin-top: 1rem;
+  background-color: #9F73AB;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-weight: 600;
+  font-size: 1rem;
 }
