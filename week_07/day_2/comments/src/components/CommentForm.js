@@ -12,6 +12,8 @@ function CommentForm({ handleSubmit }) {
       text: comment,
     };
     handleSubmit(newComment);
+    setAuthor("");
+    setComment("");
   }
   return (
     <form onSubmit={onSubmit}>
@@ -19,12 +21,14 @@ function CommentForm({ handleSubmit }) {
       <input
         id="author"
         type="text"
+        value={author}
         onChange={(e) => setAuthor(e.target.value)}
       />
       <label htmlFor="comment">Comment:</label>
       <input
         id="comment"
         type="text"
+        value={comment}
         onChange={(e) => setComment(e.target.value)}
       />
       <button>submit</button>
