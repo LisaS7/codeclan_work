@@ -13,7 +13,7 @@ function App() {
     setNumber(number + 1);
   }
 
-  function minusNumber(params) {
+  function minusNumber() {
     setNumber(number - 1);
   }
 
