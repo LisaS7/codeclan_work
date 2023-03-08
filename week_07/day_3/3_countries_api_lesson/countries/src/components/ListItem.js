@@ -1,8 +1,13 @@
-import React from 'react';
-import './ListItem.css';
+import React from "react";
+import "./ListItem.css";
 
-const ListItem = ({country}) => {
-  return <li>{country.name.common}</li>
-}
+const ListItem = ({ country, onCountryClicked }) => {
+  function handleClick() {
+    console.log("country : ", country);
+    onCountryClicked(country);
+  }
+
+  return <li onClick={handleClick}>{country.name.common}</li>;
+};
 
 export default ListItem;
