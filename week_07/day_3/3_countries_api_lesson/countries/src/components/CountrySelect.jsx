@@ -8,10 +8,7 @@ function CountrySelect({ countries, onCountrySelected }) {
   });
 
   function handleChoice(e) {
-    const selectedCountry = e.target.value;
-    const country = countries.find(
-      (country) => country.name.common === selectedCountry
-    );
+    const country = countries[e.target.value];
     onCountrySelected(country);
   }
   return (
