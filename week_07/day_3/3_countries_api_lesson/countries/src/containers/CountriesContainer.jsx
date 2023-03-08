@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CountryList from "../components/CountryList";
 import CountryDetail from "../components/CountryDetail";
+import CountrySelect from "../components/CountrySelect";
 import "./CountriesContainer.css";
 
 const CountryContainer = () => {
@@ -18,12 +19,17 @@ const CountryContainer = () => {
   };
 
   function onCountryClicked(country) {
+    console.log("top level", country);
     setSelectedCountry(country);
   }
 
   return (
     <div className="main-container">
-      <CountryList countries={countries} onCountryClicked={onCountryClicked} />
+      <CountrySelect
+        countries={countries}
+        onCountrySelected={onCountryClicked}
+      />
+      {/* <CountryList countries={countries} onCountryClicked={onCountryClicked} /> */}
       {selectedCountry ? <CountryDetail country={selectedCountry} /> : null}
     </div>
   );
