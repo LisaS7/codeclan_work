@@ -3,6 +3,8 @@ import React from "react";
 function CountryDetail({ country }) {
   const currencyData = country.currencies;
   let currencies;
+
+  //could refactor this to loop over object.keys?
   if (Array.isArray(currencyData)) {
     currencies = currencyData.map((ccy) => `${ccy.name} (${ccy.symbol})`);
   } else {
