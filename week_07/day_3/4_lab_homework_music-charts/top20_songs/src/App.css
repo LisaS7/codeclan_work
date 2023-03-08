@@ -1,0 +1,80 @@
+/* https://colorhunt.co/palette/13005a00337c1c82ad03c988 */
+
+html {
+  text-align: center;
+  background-color: #06283D;
+  color: #c6e7f4;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+header {
+  margin: 6rem;
+  font-size: 3rem;
+  text-shadow: 0 0 20px rgb(55, 254, 204);
+  letter-spacing: 0.5rem;
+}
+
+.header-icon {
+  font-size: 6rem;
+  margin: 0rem 3rem;
+}
+
+
+main {
+  margin: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.song-card, .chart-position, button {
+  box-shadow: 0 0 60px #020e16;
+}
+
+.song-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem;
+  background-color:#21374e;
+  border-radius: 300px;
+  width: 25rem;
+  height: 25rem;
+}
+
+.chart-position {
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  background-color: rgb(41, 193, 155);
+  color: #21374e;
+  width: 3rem;
+  height: 5rem;
+  border-radius: 40px;
+  font-size: 2rem;
+}
+
+.song-card h2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 25rem;
+  height: 2rem;
+}
+
+button {
+  margin: 1rem;
+  padding: 0.5rem;
+  background-color: #1C82AD;
+  color: #DFF6FF;
+  border: none;
+  border-radius: 5px;
+}
+
+
