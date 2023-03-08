@@ -15,12 +15,12 @@ function CountrySelect({ countries, onCountrySelected }) {
     onCountrySelected(country);
   }
   return (
-    <>
+    <div className="select-container">
       <label htmlFor="countries">Choose a country:</label>
       <select onChange={handleChoice} name="countries" id="countries">
         {countryOptions}
       </select>
-    </>
+    </div>
   );
 }
 

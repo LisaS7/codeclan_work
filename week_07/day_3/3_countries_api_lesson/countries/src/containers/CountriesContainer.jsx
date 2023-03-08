@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import CountryList from "../components/CountryList";
+// import CountryList from "../components/CountryList";
 import CountryDetail from "../components/CountryDetail";
 import CountrySelect from "../components/CountrySelect";
 import "./CountriesContainer.css";
@@ -19,7 +19,6 @@ const CountryContainer = () => {
   };
 
   function onCountryClicked(country) {
-    console.log("top level", country);
     setSelectedCountry(country);
   }
 
