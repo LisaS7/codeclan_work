@@ -12,7 +12,7 @@ function Song({ song, position }) {
     }
     setIsPlaying(!isPlaying);
   }
-  //   console.log(song);
+
   return (
     <section className="song-card">
       <div className="chart-position">{position}</div>
@@ -21,11 +21,9 @@ function Song({ song, position }) {
         {song.title.length > 30 ? <h4>{song.title}</h4> : <h2>{song.title}</h2>}
         <p>{song.artist}</p>
         <button onClick={play}>
-          {isPlaying ? (
-            <span className="material-symbols-outlined">pause</span>
-          ) : (
-            <span className="material-symbols-outlined">play_arrow</span>
-          )}
+          <span className="material-symbols-outlined">
+            {isPlaying ? "pause" : "play_arrow"}
+          </span>
         </button>
       </article>
     </section>
