@@ -14,6 +14,18 @@ function Beer({ beer, favourites, setFavourites }) {
     }
   }
 
+  let ingredients = [];
+
+  for (const category in beer.ingredients) {
+    try {
+      let newIngredients = beer.ingredients[category].map((item) => item.name);
+      ingredients = [...ingredients, ...newIngredients];
+    } catch {
+      let newIngredient = beer.ingredients[category];
+      ingredients = [...ingredients, newIngredient];
+    }
+  }
+
   return (
     <div className="beer">
       <details>
@@ -37,6 +49,8 @@ function Beer({ beer, favourites, setFavourites }) {
           <aside>
             <p>{beer.description}</p>
             <p>{beer.brewers_tips}</p>
+            <h4>Ingredients: </h4>
+            <p>{ingredients.join(", ")}</p>
           </aside>
         </section>
       </details>
