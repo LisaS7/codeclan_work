@@ -3,6 +3,15 @@
     padding: 2rem;
 }
 
+.favouriteFill {
+    font-variation-settings:
+    'FILL' 1 !important
+}
+
+.favouriteIcon {
+    font-size: 2rem;
+}
+
 .beer-details {
     display: flex;
     gap: 2rem;
@@ -10,4 +19,12 @@
 
 img {
     height: 10rem;
+}
+
+figure {
+    margin: 0.5rem;
+}
+
+figcaption {
+    font-style: italic;
 }

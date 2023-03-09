@@ -4,6 +4,7 @@ import "./BeerBox.css";
 
 function BeerBox() {
   const [beers, setBeers] = useState([]);
+  const [favourites, setFavourites] = useState([]);
 
   function getBeers() {
     fetch("https://api.punkapi.com/v2/beers")
@@ -17,7 +18,11 @@ function BeerBox() {
 
   return (
     <section className="beerbox">
-      <BeerList beers={beers} />
+      <BeerList
+        beers={beers}
+        favourites={favourites}
+        setFavourites={setFavourites}
+      />
     </section>
   );
 }
