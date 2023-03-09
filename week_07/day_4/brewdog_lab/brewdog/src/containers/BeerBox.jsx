@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import BeerList from "../components/BeerList";
+import "./BeerBox.css";
 
 function BeerBox() {
   const [beers, setBeers] = useState([]);
@@ -15,7 +16,7 @@ function BeerBox() {
   }, []);
 
   return (
-    <section>
+    <section className="beerbox">
       <BeerList beers={beers} />
     </section>
   );

@@ -1,0 +1,13 @@
+.beer {
+    background-color:lightgray;
+    padding: 2rem;
+}
+
+.beer-details {
+    display: flex;
+    gap: 2rem;
+}
+
+img {
+    height: 10rem;
+}
