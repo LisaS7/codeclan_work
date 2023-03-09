@@ -5,11 +5,7 @@ function Song({ song, position }) {
   const audio = useRef(new Audio(song.audioUrl));
 
   function play() {
-    if (isPlaying) {
-      audio.current.pause();
-    } else {
-      audio.current.play();
-    }
+    isPlaying ? audio.current.pause() : audio.current.play();
     setIsPlaying(!isPlaying);
   }
 
