@@ -7,10 +7,23 @@ function BeerBox() {
   const [beers, setBeers] = useState([]);
   const [favourites, setFavourites] = useState([]);
 
-  function getBeers() {
-    fetch("https://api.punkapi.com/v2/beers")
-      .then((response) => response.json())
-      .then((data) => setBeers(data));
+  async function getBeers() {
+    const url = "https://api.punkapi.com/v2/beers";
+    let beerData = [];
+    let page = 1;
+    let result = true;
+
+    while (result) {
+      let response = await fetch(`${url}?page=${page}&per_page=80`);
+      let newData = await response.json();
+      if (newData.length) {
+        beerData = [...beerData, ...newData];
+      } else {
+        result = false;
+      }
+      page++;
+    }
+    setBeers(beerData);
   }
 
   useEffect(() => {
