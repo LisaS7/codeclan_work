@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import BeerList from "../components/BeerList";
+import Favourites from "../components/Favourites";
 import "./BeerBox.css";
 
 function BeerBox() {
@@ -18,6 +19,7 @@ function BeerBox() {
 
   return (
     <section className="beerbox">
+      <Favourites favourites={favourites} />
       <BeerList
         beers={beers}
         favourites={favourites}

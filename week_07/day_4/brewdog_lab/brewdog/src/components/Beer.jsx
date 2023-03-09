@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Beer.css";
 
 function Beer({ beer, favourites, setFavourites }) {
   const [isFavourite, setIsFavourite] = useState(false);
-
-  useEffect(() => {}, []);
 
   function handleClick() {
     setIsFavourite(!isFavourite);
@@ -19,22 +17,24 @@ function Beer({ beer, favourites, setFavourites }) {
   return (
     <div className="beer">
       <details>
-        <summary>{beer.name} </summary>
+        <summary>
+          {beer.name}{" "}
+          <button onClick={handleClick} className="favourite">
+            <span
+              className={`material-symbols-outlined favouriteIcon ${
+                isFavourite && "favouriteFill"
+              }`}
+            >
+              star
+            </span>
+          </button>
+        </summary>
         <section className="beer-details">
           <figure>
             <img src={beer.image_url} alt="product" />
             <figcaption>{beer.tagline}</figcaption>
           </figure>
           <aside>
-            <button onClick={handleClick} className="favourite">
-              <span
-                className={`material-symbols-outlined favouriteIcon ${
-                  isFavourite ? "favouriteFill" : ""
-                }`}
-              >
-                star
-              </span>
-            </button>
             <p>{beer.description}</p>
             <p>{beer.brewers_tips}</p>
           </aside>

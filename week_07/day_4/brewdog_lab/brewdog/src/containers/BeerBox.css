@@ -1,3 +1,4 @@
 .beerbox {
+    display: flex;
     margin: 3rem;
 }

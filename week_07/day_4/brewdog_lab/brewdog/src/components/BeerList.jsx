@@ -13,8 +13,6 @@ function BeerList({ beers, favourites, setFavourites }) {
       />
     );
   });
-
-  console.log("LIST: ", favourites);
   return <main>{beerNodes}</main>;
 }
 
