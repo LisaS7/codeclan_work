@@ -9,7 +9,7 @@ export default function RavelryBox() {
   const [craft, setCraft] = useState("Crochet");
   const [category, setCategory] = useState("Halloween");
   const categoryList = ["Halloween", "Christmas", "Valentine's Day"];
-  const craftList = ["knitting", "crochet"];
+  const craftList = ["Knitting", "Crochet"];
   const url = "https://api.ravelry.com/patterns";
   const urlTopPatterns =
     url +

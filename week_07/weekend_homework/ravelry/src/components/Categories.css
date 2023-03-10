@@ -1,14 +1,16 @@
 nav {
-    padding: 2rem;
     display: flex;
     justify-content: center;
     gap: 1rem;
-    background-color: #189d8c;
+    background-color: var(--bg);
 }
 
 button {
-    padding: 1rem;
-    font-size: 1rem;
-    border: 2px solid #86a377;
-    background-color: #189d8c;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 2px solid var(--contrast1);
+    border-radius: 50px;
+    background-color: var(--button-bg);
+    color: var(--contrast1);
 }

@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 .App {
   text-align: center;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Righteous', cursive;
+  letter-spacing: 0.25rem;
 }
 
