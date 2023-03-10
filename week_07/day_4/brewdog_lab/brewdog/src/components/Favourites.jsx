@@ -1,9 +1,18 @@
 import "./Favourites.css";
+import FavouriteBeer from "./FavouriteBeer";
 
-function Favourites({ favourites }) {
+function Favourites({ favourites, setFavourites }) {
   const beers = favourites.map((beer) => {
-    return <p key={beer.id}>{beer.name}</p>;
+    return (
+      <FavouriteBeer
+        key={beer.id}
+        beer={beer}
+        favourites={favourites}
+        setFavourites={setFavourites}
+      />
+    );
   });
+
   return (
     <section className="favourites">
       <h2>Favourites</h2>

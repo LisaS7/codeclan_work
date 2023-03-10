@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Beer.css";
 
 function Beer({ beer, favourites, setFavourites }) {
-  const [isFavourite, setIsFavourite] = useState(false);
-
+  const isFavourite = favourites.includes(beer);
   function handleClick() {
-    setIsFavourite(!isFavourite);
     if (isFavourite) {
       const newFavourites = favourites.filter((item) => item.id !== beer.id);
       setFavourites(newFavourites);

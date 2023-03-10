@@ -32,7 +32,7 @@ function BeerBox() {
 
   return (
     <section className="beerbox">
-      <Favourites favourites={favourites} />
+      <Favourites favourites={favourites} setFavourites={setFavourites} />
       <BeerList
         beers={beers}
         favourites={favourites}
