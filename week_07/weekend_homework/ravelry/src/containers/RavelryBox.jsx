@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { trackPromise } from "react-promise-tracker";
 import { Buffer } from "buffer";
 import "./RavelryBox.css";
 import Header from "../components/Header";
+import Loading from "../components/Loading";
 import Categories from "../components/Categories";
 import PatternList from "../components/PatternList";
 
@@ -47,7 +49,7 @@ export default function RavelryBox() {
   }
 
   useEffect(() => {
-    getData();
+    trackPromise(getData());
   }, [category, craft]);
 
   return (
@@ -58,6 +60,7 @@ export default function RavelryBox() {
         <Categories options={categoryList} setValue={setCategory} />
       </section>
       <main>
+        <Loading />
         <PatternList patterns={patterns} />
       </main>
     </>
