@@ -1,3 +1,5 @@
+import "./Categories.css";
+
 export default function Categories({ options, setValue }) {
   function changeQuery(query) {
     setValue(query);
