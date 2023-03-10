@@ -1,7 +1,12 @@
 import "./App.css";
+import RavelryBox from "./containers/RavelryBox";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <RavelryBox />
+    </div>
+  );
 }
 
 export default App;
