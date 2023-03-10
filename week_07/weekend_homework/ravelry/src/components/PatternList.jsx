@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Pattern from "./Pattern";
 import "./PatternList.css";
 
@@ -7,8 +8,14 @@ export default function PatternList({ patterns }) {
       <Pattern key={pattern.id} pattern={pattern} />
     ));
 
-    return <ul>{patternCards}</ul>;
-  } else {
-    return <p>Loading...</p>;
+    return (
+      <motion.ul
+        initial={{ y: "100vh" }}
+        animate={{ y: 0 }}
+        transition={{ duration: 2 }}
+      >
+        {patternCards}
+      </motion.ul>
+    );
   }
 }

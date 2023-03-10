@@ -1,6 +1,17 @@
-import { usePromiseTracker } from "react-promise-tracker";
+import { motion } from "framer-motion";
+import "./Loading.css";
 
 export default function Loading() {
-  const { promiseInProgress } = usePromiseTracker();
-  return promiseInProgress && <h2>Page is loading....</h2>;
+  return (
+    <>
+      <motion.h2
+        className="loading-text"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, repeat: Infinity }}
+      >
+        Page is loading
+      </motion.h2>
+    </>
+  );
 }

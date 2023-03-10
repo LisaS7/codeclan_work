@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { trackPromise } from "react-promise-tracker";
+import { usePromiseTracker, trackPromise } from "react-promise-tracker";
 import { Buffer } from "buffer";
 import "./RavelryBox.css";
 import Header from "../components/Header";
@@ -8,6 +8,7 @@ import Categories from "../components/Categories";
 import PatternList from "../components/PatternList";
 
 export default function RavelryBox() {
+  const { promiseInProgress } = usePromiseTracker();
   const [patterns, setPatterns] = useState([]);
   const [craft, setCraft] = useState("Crochet");
   const [category, setCategory] = useState("Halloween");
@@ -60,8 +61,7 @@ export default function RavelryBox() {
         <Categories options={categoryList} setValue={setCategory} />
       </section>
       <main>
-        <Loading />
-        <PatternList patterns={patterns} />
+        {promiseInProgress ? <Loading /> : <PatternList patterns={patterns} />}
       </main>
     </>
   );
