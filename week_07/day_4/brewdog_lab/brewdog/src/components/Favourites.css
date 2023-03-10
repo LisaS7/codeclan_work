@@ -6,8 +6,9 @@
     padding: 2rem;
     width: 20rem;
     background-color: #c3b4b3;
+    box-shadow: 0 0 10px black;
     opacity: 85%;
-    border: 3px dashed dimgray;
+    border: 4px dashed dimgray;
     
 }
 

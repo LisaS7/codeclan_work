@@ -4,6 +4,7 @@ details > summary {
 
 .beer {
     background-color:#c3b4b3;
+    box-shadow: 0 0 10px black;
     opacity: 90%;
     padding: 2rem;
 }
@@ -31,7 +32,7 @@ details > summary {
 }
 
 .product-image {
-    height: 5rem;
+    height: 6rem;
 }
 
 figcaption {
