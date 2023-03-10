@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import yarn from "./yarn-ball.png";
 import "./Loading.css";
 
 export default function Loading() {
@@ -12,6 +13,13 @@ export default function Loading() {
       >
         Page is loading
       </motion.h2>
+      <motion.img
+        className="loading-ball"
+        src={yarn}
+        alt="yarn ball"
+        animate={{ rotate: 360 }}
+        transition={{ duration: 1.5, repeat: Infinity, delay: 1 }}
+      />
     </>
   );
 }
