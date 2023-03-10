@@ -4,13 +4,3 @@ nav {
     gap: 1rem;
     background-color: var(--bg);
 }
-
-button {
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    border: 2px solid var(--contrast1);
-    border-radius: 50px;
-    background-color: var(--button-bg);
-    color: var(--contrast1);
-}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Buffer } from "buffer";
+import "./RavelryBox.css";
 import Header from "../components/Header";
 import Categories from "../components/Categories";
 import PatternList from "../components/PatternList";
@@ -52,9 +53,10 @@ export default function RavelryBox() {
   return (
     <>
       <Header />
-      <section></section>
-      <Categories options={craftList} setValue={setCraft} />
-      <Categories options={categoryList} setValue={setCategory} />
+      <section className="navbox">
+        <Categories options={craftList} setValue={setCraft} />
+        <Categories options={categoryList} setValue={setCategory} />
+      </section>
       <main>
         <PatternList patterns={patterns} />
       </main>
