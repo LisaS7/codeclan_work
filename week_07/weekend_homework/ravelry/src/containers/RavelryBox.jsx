@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Buffer } from "buffer";
+import Header from "../components/Header";
+import PatternList from "../components/PatternList";
 
 export default function RavelryBox() {
   const [patterns, setPatterns] = useState([]);
@@ -24,8 +26,8 @@ export default function RavelryBox() {
     });
     const summaryData = await response.json();
     const patternIDs = summaryData.patterns.map((pattern) => pattern.id);
-
     const patternURLs = patternIDs.map((id) => `${url}/${id}.json`);
+    let patternList = [];
 
     for (const pattern of patternURLs) {
       const response = await fetch(pattern, {
@@ -33,13 +35,21 @@ export default function RavelryBox() {
         headers: headers,
       });
       const data = await response.json();
-      setPatterns([...patterns, data.pattern]);
+      patternList = [...patternList, data.pattern];
     }
+    setPatterns(patternList);
   }
 
   useEffect(() => {
     getData();
   }, []);
 
-  return <main></main>;
+  return (
+    <>
+      <Header />
+      <main>
+        <PatternList patterns={patterns} />
+      </main>
+    </>
+  );
 }
