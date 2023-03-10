@@ -1,4 +1,5 @@
 import "./FavouriteBeer.css";
+import goldBottle from "./beer-bottle-gold.png";
 
 export default function FavouriteBeer({ beer, favourites, setFavourites }) {
   function handleClick() {
@@ -7,13 +8,9 @@ export default function FavouriteBeer({ beer, favourites, setFavourites }) {
   }
 
   return (
-    <p key={beer.id}>
+    <div className="beer-card" key={beer.id}>
       {beer.name}
-      <button onClick={handleClick} className="favourite">
-        <span className="material-symbols-outlined favouriteIcon favouriteFill">
-          star
-        </span>
-      </button>
-    </p>
+      <img onClick={handleClick} src={goldBottle} alt="beer bottle icon" />
+    </div>
   );
 }

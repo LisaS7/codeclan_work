@@ -1,8 +1,11 @@
 import React from "react";
 import "./Beer.css";
+import greyBottle from "./beer-bottle-grey.png";
+import goldBottle from "./beer-bottle-gold.png";
 
 function Beer({ beer, favourites, setFavourites }) {
   const isFavourite = favourites.includes(beer);
+
   function handleClick() {
     if (isFavourite) {
       const newFavourites = favourites.filter((item) => item.id !== beer.id);
@@ -13,7 +16,6 @@ function Beer({ beer, favourites, setFavourites }) {
   }
 
   let allIngredients = [];
-
   for (const category in beer.ingredients) {
     try {
       let newIngredients = beer.ingredients[category].map((item) => item.name);
@@ -29,25 +31,29 @@ function Beer({ beer, favourites, setFavourites }) {
     <div className="beer">
       <details>
         <summary>
-          {beer.name}{" "}
-          <button onClick={handleClick} className="favourite">
-            <span
-              className={`material-symbols-outlined favouriteIcon ${
-                isFavourite && "favouriteFill"
-              }`}
-            >
-              star
-            </span>
-          </button>
+          <div className="summary-card">
+            <section className="card-title">
+              <img
+                className="product-image"
+                src={beer.image_url}
+                alt="product"
+              />
+              <h3>{beer.name}</h3>
+            </section>
+            <button>
+              <img
+                onClick={handleClick}
+                src={isFavourite ? goldBottle : greyBottle}
+                alt="beer bottle icon"
+              />
+            </button>
+          </div>
+
+          <p>{beer.tagline}</p>
         </summary>
         <section className="beer-details">
-          <figure>
-            <img src={beer.image_url} alt="product" />
-            <figcaption>{beer.tagline}</figcaption>
-          </figure>
           <aside>
             <p>{beer.description}</p>
-            <p>{beer.brewers_tips}</p>
             <h4>Ingredients: </h4>
             <p>{ingredients.join(", ")}</p>
           </aside>

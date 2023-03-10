@@ -4,17 +4,14 @@
     gap: 1rem;
     margin: 0rem 3rem;
     padding: 2rem;
-    min-width: 10rem;
-    background-color: gainsboro;
+    width: 20rem;
+    background-color: #c3b4b3;
+    opacity: 85%;
     border: 3px dashed dimgray;
+    
 }
 
 h2 {
     padding-bottom: 2rem;
     border-bottom: 3px solid black;
-}
-
-p {
-    padding-bottom: 3rem;
-    border-bottom: 1px solid darkgrey;
 }
