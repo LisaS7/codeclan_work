@@ -1,10 +1,9 @@
-export default function Categories({ category, setCategory }) {
-  const categoryOptions = ["Halloween", "Christmas", "Valentine's Day"];
+export default function Categories({ options, setValue }) {
   function changeQuery(query) {
-    setCategory(query);
+    setValue(query);
   }
 
-  const categoryButtons = categoryOptions.map((word, index) => (
+  const categoryButtons = options.map((word, index) => (
     <button key={index} onClick={() => changeQuery(word)}>
       {word}
     </button>
