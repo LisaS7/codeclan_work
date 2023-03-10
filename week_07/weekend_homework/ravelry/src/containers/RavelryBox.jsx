@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Buffer } from "buffer";
 import Header from "../components/Header";
+import Categories from "../components/Categories";
 import PatternList from "../components/PatternList";
 
 export default function RavelryBox() {
   const [patterns, setPatterns] = useState([]);
+  const [category, setCategory] = useState("Halloween");
   const url = "https://api.ravelry.com/patterns";
   const urlTopPatterns =
     url +
-    "/search.json?craft=crochet&pc=toysandhobbies&query=halloween&sort=favorites&page=1&page_size=20";
+    `/search.json?craft=crochet&pc=toysandhobbies&query=${category}&sort=favorites&page=1&page_size=20`;
 
   const username = process.env.REACT_APP_API_USER;
   const password = process.env.REACT_APP_API_PASSWORD;
@@ -42,11 +44,12 @@ export default function RavelryBox() {
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [category]);
 
   return (
     <>
       <Header />
+      <Categories category={category} setCategory={setCategory} />
       <main>
         <PatternList patterns={patterns} />
       </main>
