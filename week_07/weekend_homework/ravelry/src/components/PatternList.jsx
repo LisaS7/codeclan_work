@@ -1,4 +1,5 @@
 import Pattern from "./Pattern";
+import "./PatternList.css";
 
 export default function PatternList({ patterns }) {
   if (patterns) {
