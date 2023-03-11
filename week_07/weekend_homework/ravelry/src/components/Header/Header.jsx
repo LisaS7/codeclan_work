@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import background from "./header.jpeg";
+import { motion } from "framer-motion";
 
-const StyledHeader = styled.header`
+const StyledHeader = styled(motion.header)`
   background-image: url(${background});
   background-position: center;
   padding: 2rem;
@@ -29,9 +30,13 @@ const H3 = styled(StyledHeading)`
 
 export default function Header() {
   return (
-    <StyledHeader>
+    <StyledHeader
+      initial={{ y: "-50vh" }}
+      animate={{ y: 0 }}
+      transition={{ duration: 2 }}
+    >
       <H1>Ravelry Patterns</H1>
-      <H3>Search for top patterns by craft and category</H3>
+      <H3>Search for top patterns by craft and theme</H3>
     </StyledHeader>
   );
 }

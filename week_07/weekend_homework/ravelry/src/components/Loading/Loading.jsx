@@ -21,10 +21,9 @@ export default function Loading() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, repeat: Infinity }}
       >
-        Page is loading
+        Fetching patterns
       </LoadingText>
       <LoadingBall
-        className="loading-ball"
         src={yarn}
         alt="yarn ball"
         animate={{ rotate: 360 }}
