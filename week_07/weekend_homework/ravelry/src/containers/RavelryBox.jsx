@@ -39,7 +39,12 @@ export default function RavelryBox() {
 
   return (
     <>
-      <ButtonBox setCategory={setCategory} setCraft={setCraft} />
+      <ButtonBox
+        craft={craft}
+        setCraft={setCraft}
+        category={category}
+        setCategory={setCategory}
+      />
       <main>
         {promiseInProgress ? <Loading /> : <PatternList patterns={patterns} />}
       </main>

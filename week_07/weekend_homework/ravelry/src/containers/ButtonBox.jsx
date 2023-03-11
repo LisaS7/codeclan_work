@@ -9,11 +9,19 @@ const Container = styled.section`
   gap: 1.5rem;
 `;
 
-export default function ButtonBox({ setCraft, setCategory }) {
+export default function ButtonBox({ craft, setCraft, category, setCategory }) {
   return (
     <Container>
-      <Categories options={constants.craftList} setValue={setCraft} />
-      <Categories options={constants.categoryList} setValue={setCategory} />
+      <Categories
+        options={constants.craftList}
+        current={craft}
+        setValue={setCraft}
+      />
+      <Categories
+        options={constants.categoryList}
+        current={category}
+        setValue={setCategory}
+      />
     </Container>
   );
 }
