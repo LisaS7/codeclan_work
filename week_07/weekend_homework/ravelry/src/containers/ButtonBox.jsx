@@ -1,15 +1,15 @@
 import styled from "styled-components";
-import { constants } from "../Constants";
+import { constants } from "../constants/Constants";
 import Categories from "../components/Categories";
 
-export default function ButtonBox({ setCraft, setCategory }) {
-  const Container = styled.section`
-    padding: 6rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  `;
+const Container = styled.section`
+  padding: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+`;
 
+export default function ButtonBox({ setCraft, setCategory }) {
   return (
     <Container>
       <Categories options={constants.craftList} setValue={setCraft} />

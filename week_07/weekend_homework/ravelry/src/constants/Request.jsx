@@ -9,12 +9,7 @@ headers.set(
   "Basic " + Buffer.from(username + ":" + password).toString("base64")
 );
 
-export const constants = {
-  categoryList: ["Halloween", "Christmas", "Valentine's Day"],
-  craftList: ["Knitting", "Crochet"],
-  url: "https://api.ravelry.com/patterns",
-  requestHeaders: {
-    method: "GET",
-    headers: headers,
-  },
+export const requestHeaders = {
+  method: "GET",
+  headers: headers,
 };

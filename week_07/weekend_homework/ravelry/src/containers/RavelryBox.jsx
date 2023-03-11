@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { usePromiseTracker, trackPromise } from "react-promise-tracker";
 import Loading from "../components/Loading/Loading";
 import PatternList from "../components/PatternList";
-import { constants } from "../Constants";
+import { requestHeaders } from "../constants/Request";
 import ButtonBox from "./ButtonBox";
 
 export default function RavelryBox() {
@@ -12,21 +12,21 @@ export default function RavelryBox() {
   const [craft, setCraft] = useState("Crochet");
   const [category, setCategory] = useState("Halloween");
 
-  const urlTopPatterns =
-    constants.url +
-    `/search.json?craft=${craft}&pc=toysandhobbies&query=${category}&sort=favorites&page=1&page_size=20`;
+  const urlTopPatterns = `https://api.ravelry.com/patterns/search.json?craft=${craft}&pc=toysandhobbies&query=${category}&sort=favorites&page=1&page_size=20`;
 
   async function getData() {
-    const response = await fetch(urlTopPatterns, constants.requestHeaders);
+    const response = await fetch(urlTopPatterns, requestHeaders);
     const summaryData = await response.json();
 
     const patternIDs = summaryData.patterns.map((pattern) => pattern.id);
-    const patternURLs = patternIDs.map((id) => `${constants.url}/${id}.json`);
+    const patternURLs = patternIDs.map(
+      (id) => `https://api.ravelry.com/patterns/${id}.json`
+    );
 
     let patternList = [];
 
     for (const pattern of patternURLs) {
-      const response = await fetch(pattern, constants.requestHeaders);
+      const response = await fetch(pattern, requestHeaders);
       const data = await response.json();
       patternList = [...patternList, data.pattern];
     }
