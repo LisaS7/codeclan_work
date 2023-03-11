@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { usePromiseTracker, trackPromise } from "react-promise-tracker";
 import { Buffer } from "buffer";
-import "./RavelryBox.css";
 import Header from "../components/Header/Header";
-import Loading from "../components/Loading";
+import Loading from "../components/Loading/Loading";
 import Categories from "../components/Categories";
 import PatternList from "../components/PatternList";
+import styled from "styled-components";
+
+const Container = styled.section`
+  padding: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+`;
 
 export default function RavelryBox() {
   const { promiseInProgress } = usePromiseTracker();
@@ -56,10 +63,10 @@ export default function RavelryBox() {
   return (
     <>
       <Header />
-      <section className="navbox">
+      <Container>
         <Categories options={craftList} setValue={setCraft} />
         <Categories options={categoryList} setValue={setCategory} />
-      </section>
+      </Container>
       <main>
         {promiseInProgress ? <Loading /> : <PatternList patterns={patterns} />}
       </main>

@@ -20,11 +20,11 @@ const StyledHeading = styled.h1`
 `;
 
 const H1 = styled(StyledHeading)`
-  font-size: 6rem;
+  font-size: 3rem;
 `;
 
 const H3 = styled(StyledHeading)`
-  font-size: 3rem;
+  font-size: 1.5rem;
 `;
 
 export default function Header() {

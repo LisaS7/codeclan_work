@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Nav = styled.nav`
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
   background-color: ${({ theme }) => theme.colours.background};
 `;
 

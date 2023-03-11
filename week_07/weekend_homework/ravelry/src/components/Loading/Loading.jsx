@@ -3,6 +3,7 @@ import yarn from "./yarn-ball.png";
 import styled from "styled-components";
 
 const LoadingText = styled(motion.h2)`
+  color: white;
   font-size: 3rem;
 `;
 
