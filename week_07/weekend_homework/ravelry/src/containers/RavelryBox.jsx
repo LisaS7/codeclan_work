@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { usePromiseTracker, trackPromise } from "react-promise-tracker";
+import ButtonBox from "./ButtonBox";
 import Loading from "../components/Loading/Loading";
 import PatternList from "../components/PatternList";
 import { requestHeaders } from "../constants/Request";
-import ButtonBox from "./ButtonBox";
 
 export default function RavelryBox() {
   const { promiseInProgress } = usePromiseTracker();

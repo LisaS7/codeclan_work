@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
     button {
         padding: 1rem 2rem;
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 600;
         border-radius: 50px;
         background-color: ${({ theme }) => theme.colours.contrast2};
