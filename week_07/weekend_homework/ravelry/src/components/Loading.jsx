@@ -1,19 +1,28 @@
 import { motion } from "framer-motion";
 import yarn from "./yarn-ball.png";
-import "./Loading.css";
+import styled from "styled-components";
+
+const LoadingText = styled(motion.h2)`
+  font-size: 3rem;
+`;
+
+const LoadingBall = styled(motion.img)`
+  margin-top: 3.5rem;
+  width: 9rem;
+  height: 9rem;
+`;
 
 export default function Loading() {
   return (
     <>
-      <motion.h2
-        className="loading-text"
+      <LoadingText
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, repeat: Infinity }}
       >
         Page is loading
-      </motion.h2>
-      <motion.img
+      </LoadingText>
+      <LoadingBall
         className="loading-ball"
         src={yarn}
         alt="yarn ball"
