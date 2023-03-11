@@ -1,5 +1,12 @@
-import "./Categories.css";
 import { motion } from "framer-motion";
+import styled from "styled-components";
+
+const Nav = styled.nav`
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  background-color: ${({ theme }) => theme.colours.background};
+`;
 
 export default function Categories({ options, setValue }) {
   function changeQuery(query) {
@@ -20,5 +27,5 @@ export default function Categories({ options, setValue }) {
       {word}
     </motion.button>
   ));
-  return <nav>{categoryButtons}</nav>;
+  return <Nav>{categoryButtons}</Nav>;
 }
