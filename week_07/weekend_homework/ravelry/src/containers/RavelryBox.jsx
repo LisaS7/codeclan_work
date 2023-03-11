@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { usePromiseTracker, trackPromise } from "react-promise-tracker";
 import { Buffer } from "buffer";
 import "./RavelryBox.css";
-import Header from "../components/Header";
+import Header from "../components/Header/Header";
 import Loading from "../components/Loading";
 import Categories from "../components/Categories";
 import PatternList from "../components/PatternList";
