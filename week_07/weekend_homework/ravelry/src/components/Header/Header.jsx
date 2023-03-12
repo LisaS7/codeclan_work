@@ -28,13 +28,14 @@ const H3 = styled(StyledHeading)`
   font-size: 1.5rem;
 `;
 
+const headerVariant = {
+  initial: { y: "-50vh" },
+  animate: { y: 0, transition: { duration: 2, delay: 3 } },
+};
+
 export default function Header() {
   return (
-    <StyledHeader
-      initial={{ y: "-50vh" }}
-      animate={{ y: 0 }}
-      transition={{ duration: 2, delay: 3 }}
-    >
+    <StyledHeader variants={headerVariant} initial="initial" animate="animate">
       <H1>Ravelry Patterns</H1>
       <H3>Search for top patterns by craft and theme</H3>
     </StyledHeader>

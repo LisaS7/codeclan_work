@@ -9,6 +9,11 @@ const StyledList = styled(motion.ul)`
   list-style: none;
 `;
 
+const listVariants = {
+  initial: { y: "100vh" },
+  animate: { y: 0, trnasition: { duration: 2 } },
+};
+
 export default function PatternList({ patterns }) {
   if (patterns) {
     const patternCards = patterns.map((pattern) => (
@@ -16,11 +21,7 @@ export default function PatternList({ patterns }) {
     ));
 
     return (
-      <StyledList
-        initial={{ y: "100vh" }}
-        animate={{ y: 0 }}
-        transition={{ duration: 2 }}
-      >
+      <StyledList initial="initial" animate="animate" variants={listVariants}>
         {patternCards}
       </StyledList>
     );

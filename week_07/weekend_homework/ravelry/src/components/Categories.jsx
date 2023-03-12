@@ -10,16 +10,25 @@ const Nav = styled.nav`
 
 const Button = styled(motion.button)``;
 
+const buttonVariants = {
+  hover: {
+    scale: 1.2,
+    boxShadow: "0 0 10px pink",
+    transition: { duration: 0.5 },
+  },
+  tap: {
+    backgroundColor: "#1c1e27",
+    border: "2px solid pink",
+  },
+};
+
 export default function Categories({ options, current, setValue }) {
   const categoryButtons = options.map((word, index) => {
     return (
       <Button
-        whileHover={{
-          scale: 1.2,
-          boxShadow: "0 0 10px pink",
-          transition: { duration: 0.5 },
-        }}
-        whileTap={{ backgroundColor: "#1c1e27", border: "2px solid pink" }}
+        whileHover="hover"
+        whileTap="tap"
+        variants={buttonVariants}
         key={index}
         onClick={(e) => {
           setValue(word);
