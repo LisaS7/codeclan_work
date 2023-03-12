@@ -6,7 +6,6 @@ const StyledHeader = styled(motion.header)`
   background-image: url(${background});
   background-position: center;
   padding: 2rem;
-  font-family: "Kalam", cursive;
   color: white;
   display: flex;
   flex-direction: column;
