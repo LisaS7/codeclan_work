@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
+import { useState, useEffect } from "react";
 
 const Nav = styled.nav`
   display: flex;
@@ -9,6 +10,9 @@ const Nav = styled.nav`
 `;
 
 const Button = styled(motion.button)``;
+const SelectedButton = styled(motion.button)`
+  background-color: green;
+`;
 
 const buttonVariants = {
   hover: {
@@ -22,26 +26,42 @@ const buttonVariants = {
   },
 };
 
-export default function Categories({ options, current, setValue }) {
+function createButtons(options, current, setValue) {
   const categoryButtons = options.map((word, index) => {
-    return (
-      <Button
-        whileHover="hover"
-        whileTap="tap"
-        variants={buttonVariants}
-        key={index}
-        onClick={(e) => {
-          setValue(word);
-          console.log("current", current);
-          console.log("word", word);
-          current === word
-            ? (e.target.style.backgroundColor = "green")
-            : (e.target.style.backgroundColor = "blue");
-        }}
-      >
-        {word}
-      </Button>
-    );
+    if (current === word) {
+      return (
+        <SelectedButton
+          key={index}
+          onClick={() => {
+            setValue(word);
+          }}
+        >
+          {word}
+        </SelectedButton>
+      );
+    } else {
+      return (
+        <Button
+          whileHover="hover"
+          whileTap="tap"
+          variants={buttonVariants}
+          key={index}
+          onClick={() => {
+            setValue(word);
+          }}
+        >
+          {word}
+        </Button>
+      );
+    }
   });
-  return <Nav>{categoryButtons}</Nav>;
+  return categoryButtons;
+}
+
+export default function Categories({ options, current, setValue }) {
+  const [buttons, setButtons] = useState([]);
+  useEffect(() => {
+    setButtons(createButtons(options, current, setValue));
+  }, [current]);
+  return <Nav>{buttons}</Nav>;
 }
