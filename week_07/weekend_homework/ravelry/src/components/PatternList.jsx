@@ -11,7 +11,7 @@ const StyledList = styled(motion.ul)`
 
 const listVariants = {
   initial: { y: "100vh" },
-  animate: { y: 0, trnasition: { duration: 2 } },
+  animate: { y: 0, transition: { duration: 2 } },
 };
 
 export default function PatternList({ patterns }) {
