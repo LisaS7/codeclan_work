@@ -33,7 +33,7 @@ export default function Header() {
     <StyledHeader
       initial={{ y: "-50vh" }}
       animate={{ y: 0 }}
-      transition={{ duration: 2 }}
+      transition={{ duration: 2, delay: 3 }}
     >
       <H1>Ravelry Patterns</H1>
       <H3>Search for top patterns by craft and theme</H3>
