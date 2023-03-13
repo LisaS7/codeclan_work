@@ -4,13 +4,14 @@ import { render, fireEvent } from "@testing-library/react";
 
 describe("Calculator", () => {
   let container;
-  let button1, button3, button4, button5, button7;
-  let buttonPlus, buttonMinus, buttonMultiply, buttonEquals;
+  let button1, button2, button3, button4, button5, button7;
+  let buttonPlus, buttonMinus, buttonMultiply, buttonDivide, buttonEquals;
   let runningTotal;
 
   beforeEach(() => {
     container = render(<Calculator />);
     button1 = container.getByTestId("number1");
+    button2 = container.getByTestId("number2");
     button3 = container.getByTestId("number3");
     button4 = container.getByTestId("number4");
     button5 = container.getByTestId("number5");
@@ -18,6 +19,7 @@ describe("Calculator", () => {
     buttonPlus = container.getByTestId("operator-add");
     buttonMinus = container.getByTestId("operator-subtract");
     buttonMultiply = container.getByTestId("operator-multiply");
+    buttonDivide = container.getByTestId("operator-divide");
     buttonEquals = container.getByTestId("operator-equals");
     runningTotal = container.getByTestId("running-total");
   });
@@ -49,5 +51,14 @@ describe("Calculator", () => {
     fireEvent.click(button5);
     fireEvent.click(buttonEquals);
     expect(runningTotal.textContent).toEqual("15");
+  });
+
+  it("Should divide one number by another", () => {
+    fireEvent.click(button2);
+    fireEvent.click(button1);
+    fireEvent.click(buttonDivide);
+    fireEvent.click(button7);
+    fireEvent.click(buttonEquals);
+    expect(runningTotal.textContent).toEqual("3");
   });
 });
