@@ -4,17 +4,20 @@ import { render, fireEvent } from "@testing-library/react";
 
 describe("Calculator", () => {
   let container;
-  let button1, button4, button7;
-  let buttonPlus, buttonMinus, buttonEquals;
+  let button1, button3, button4, button5, button7;
+  let buttonPlus, buttonMinus, buttonMultiply, buttonEquals;
   let runningTotal;
 
   beforeEach(() => {
     container = render(<Calculator />);
     button1 = container.getByTestId("number1");
+    button3 = container.getByTestId("number3");
     button4 = container.getByTestId("number4");
+    button5 = container.getByTestId("number5");
     button7 = container.getByTestId("number7");
     buttonPlus = container.getByTestId("operator-add");
     buttonMinus = container.getByTestId("operator-subtract");
+    buttonMultiply = container.getByTestId("operator-multiply");
     buttonEquals = container.getByTestId("operator-equals");
     runningTotal = container.getByTestId("running-total");
   });
@@ -38,5 +41,13 @@ describe("Calculator", () => {
     fireEvent.click(button4);
     fireEvent.click(buttonEquals);
     expect(runningTotal.textContent).toEqual("3");
+  });
+
+  it("should multiply two numbers", () => {
+    fireEvent.click(button3);
+    fireEvent.click(buttonMultiply);
+    fireEvent.click(button5);
+    fireEvent.click(buttonEquals);
+    expect(runningTotal.textContent).toEqual("15");
   });
 });
