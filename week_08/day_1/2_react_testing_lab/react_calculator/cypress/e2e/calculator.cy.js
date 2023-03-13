@@ -35,4 +35,9 @@ describe("Calculator", () => {
     clickButtons([3, "-", 9, "="]);
     cy.get(".display").should("contain", "-6");
   });
+
+  it("should output decimal", () => {
+    clickButtons([5, "/", 2, "="]);
+    cy.get(".display").should("contain", "2.5");
+  });
 });
