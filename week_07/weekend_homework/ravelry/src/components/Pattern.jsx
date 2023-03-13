@@ -34,7 +34,7 @@ export default function Pattern({ pattern }) {
     <PatternCard
       whileHover={{
         scale: 1.1,
-        boxShadow: "0 0 20px hotpink",
+        boxShadow: "0 0 20px orange",
         transition: { duration: 0.5 },
       }}
     >

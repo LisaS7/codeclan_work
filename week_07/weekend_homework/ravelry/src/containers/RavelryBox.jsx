@@ -10,7 +10,7 @@ export default function RavelryBox() {
 
   const [patterns, setPatterns] = useState([]);
   const [craft, setCraft] = useState("Crochet");
-  const [category, setCategory] = useState("Halloween");
+  const [category, setCategory] = useState("Pokemon");
 
   const urlTopPatterns = `https://api.ravelry.com/patterns/search.json?craft=${craft}&query=${category}&sort=favorites&page=1&page_size=20`;
 

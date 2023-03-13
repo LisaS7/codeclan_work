@@ -15,21 +15,23 @@ const LoadingBall = styled(motion.img)`
 `;
 
 const textVariant = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1, transition: { duration: 1, repeat: Infinity } },
+  animate: {
+    opacity: [0, 1, 0],
+    transition: { duration: 1, repeat: Infinity },
+  },
 };
 
 const ballVariant = {
   animate: {
     rotate: 360,
-    transition: { duration: 1.5, repeat: Infinity, delay: 1 },
+    transition: { duration: 1.75, repeat: Infinity, delay: 0.75 },
   },
 };
 
 export default function Loading() {
   return (
     <>
-      <LoadingText initial="initial" animate="animate" variants={textVariant}>
+      <LoadingText animate="animate" variants={textVariant}>
         Fetching patterns
       </LoadingText>
       <LoadingBall
