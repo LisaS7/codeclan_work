@@ -45,4 +45,9 @@ describe("Calculator", () => {
     clickButtons([9, 9, 9, 9, 9, 9, 9, 9, "*", 9, 9, 9, 9, 9, 9, 9, 9, "="]);
     cy.get(".display").should("contain", "9999999800000000");
   });
+
+  it("should show error when asked to divide by zero", () => {
+    clickButtons([5, "/", 0, "="]);
+    cy.get(".display").should("contain", "error: div 0");
+  });
 });
