@@ -1,7 +1,9 @@
+import { buttonMap } from "./button_map";
+
 describe("Calculator", () => {
   function clickButtons(buttons) {
     for (let button of buttons) {
-      cy.get(button).click();
+      cy.get(buttonMap[button]).click();
     }
   }
 
@@ -10,12 +12,17 @@ describe("Calculator", () => {
   });
 
   it("should have working number buttons", () => {
-    cy.get("#number2").click();
+    clickButtons([2]);
     cy.get(".display").should("contain", "2");
   });
 
   it("should update the running total display", () => {
-    clickButtons(["#number3", "#number1", "#number5"]);
+    clickButtons([3, 1, 5]);
     cy.get(".display").should("contain", "315");
+  });
+
+  it("should update the display for operations", () => {
+    clickButtons([1, "+", 2, "+"]);
+    cy.get(".display").should("contain", "3");
   });
 });
