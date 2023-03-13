@@ -40,4 +40,9 @@ describe("Calculator", () => {
     clickButtons([5, "/", 2, "="]);
     cy.get(".display").should("contain", "2.5");
   });
+
+  it("should output large number", () => {
+    clickButtons([9, 9, 9, 9, 9, 9, 9, 9, "*", 9, 9, 9, 9, 9, 9, 9, 9, "="]);
+    cy.get(".display").should("contain", "9999999800000000");
+  });
 });
