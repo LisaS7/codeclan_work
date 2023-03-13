@@ -16,9 +16,8 @@ const SelectedButton = styled(motion.button)`
 
 const buttonVariants = {
   hover: {
-    scale: 1.2,
-    boxShadow: "0 0 10px pink",
-    transition: { duration: 0.5 },
+    scale: [1, 1.2, 1],
+    transition: { duration: 0.75, repeat: Infinity },
   },
   tap: {
     backgroundColor: "#1c1e27",
