@@ -10,6 +10,20 @@
   border-radius: 10px;
 }
 
+#counter {
+  border: 2px solid whitesmoke;
+  padding: 1rem 3rem;
+  border-radius: 10px;
+}
+
 ul {
   list-style: none;
+}
+
+button {
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: none;
+  margin: 0 1rem;
+  background-color: rgb(181, 200, 200);
 }
