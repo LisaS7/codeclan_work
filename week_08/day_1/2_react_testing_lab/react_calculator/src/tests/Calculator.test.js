@@ -11,7 +11,12 @@ function chainClicks(buttons) {
 describe("Calculator", () => {
   let container;
   let button1, button2, button3, button4, button5, button7;
-  let buttonPlus, buttonMinus, buttonMultiply, buttonDivide, buttonEquals;
+  let buttonPlus,
+    buttonMinus,
+    buttonMultiply,
+    buttonDivide,
+    buttonEquals,
+    buttonClear;
   let runningTotal;
 
   beforeEach(() => {
@@ -27,6 +32,7 @@ describe("Calculator", () => {
     buttonMultiply = container.getByTestId("operator-multiply");
     buttonDivide = container.getByTestId("operator-divide");
     buttonEquals = container.getByTestId("operator-equals");
+    buttonClear = container.getByTestId("clear");
     runningTotal = container.getByTestId("running-total");
   });
 
@@ -70,5 +76,19 @@ describe("Calculator", () => {
       buttonEquals,
     ]);
     expect(runningTotal.textContent).toEqual("14");
+  });
+
+  it("should clear the running total without affecting the calculation", () => {
+    chainClicks([
+      button2,
+      buttonPlus,
+      button4,
+      buttonPlus,
+      button5,
+      buttonClear,
+      button1,
+      buttonEquals,
+    ]);
+    expect(runningTotal.textContent).toEqual("7");
   });
 });
