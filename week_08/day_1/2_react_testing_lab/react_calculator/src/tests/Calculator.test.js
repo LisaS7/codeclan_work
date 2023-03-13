@@ -68,4 +68,14 @@ describe("Calculator", () => {
     fireEvent.click(button5);
     expect(runningTotal.textContent).toEqual("115");
   });
+
+  it("should chain multiple operations", () => {
+    fireEvent.click(button3);
+    fireEvent.click(buttonPlus);
+    fireEvent.click(button4);
+    fireEvent.click(buttonMultiply);
+    fireEvent.click(button2);
+    fireEvent.click(buttonEquals);
+    expect(runningTotal.textContent).toEqual("14");
+  });
 });
