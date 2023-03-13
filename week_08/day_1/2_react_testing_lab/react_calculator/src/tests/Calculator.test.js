@@ -53,12 +53,19 @@ describe("Calculator", () => {
     expect(runningTotal.textContent).toEqual("15");
   });
 
-  it("Should divide one number by another", () => {
+  it("should divide one number by another", () => {
     fireEvent.click(button2);
     fireEvent.click(button1);
     fireEvent.click(buttonDivide);
     fireEvent.click(button7);
     fireEvent.click(buttonEquals);
     expect(runningTotal.textContent).toEqual("3");
+  });
+
+  it("should concatenate multiple number buttons", () => {
+    fireEvent.click(button1);
+    fireEvent.click(button1);
+    fireEvent.click(button5);
+    expect(runningTotal.textContent).toEqual("115");
   });
 });
