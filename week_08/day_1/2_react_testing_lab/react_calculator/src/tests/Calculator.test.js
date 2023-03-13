@@ -30,14 +30,14 @@ describe("Calculator", () => {
 
   it("should subtract one number from another", () => {
     const button4 = container.getByTestId("number4");
-    const button7 = container.getByTestId("number1");
-    const buttonPlus = container.getByTestId("operator-add");
+    const button7 = container.getByTestId("number7");
+    const buttonMinus = container.getByTestId("operator-subtract");
     const buttonEquals = container.getByTestId("operator-equals");
     const runningTotal = container.getByTestId("running-total");
-    fireEvent.click(button1);
-    fireEvent.click(buttonPlus);
+    fireEvent.click(button7);
+    fireEvent.click(buttonMinus);
     fireEvent.click(button4);
     fireEvent.click(buttonEquals);
-    expect(runningTotal.textContent).toEqual("5");
+    expect(runningTotal.textContent).toEqual("3");
   });
 });
