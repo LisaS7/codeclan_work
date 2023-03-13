@@ -30,4 +30,9 @@ describe("Calculator", () => {
     clickButtons([4, "+", 5, "*", 3, "-", 2, "="]);
     cy.get(".display").should("contain", "25");
   });
+
+  it("should output negative number", () => {
+    clickButtons([3, "-", 9, "="]);
+    cy.get(".display").should("contain", "-6");
+  });
 });
