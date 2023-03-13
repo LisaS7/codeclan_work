@@ -25,4 +25,9 @@ describe("Calculator", () => {
     clickButtons([1, "+", 2, "+"]);
     cy.get(".display").should("contain", "3");
   });
+
+  it("should chain multiple operations", () => {
+    clickButtons([4, "+", 5, "*", 3, "-", 2, "="]);
+    cy.get(".display").should("contain", "25");
+  });
 });
