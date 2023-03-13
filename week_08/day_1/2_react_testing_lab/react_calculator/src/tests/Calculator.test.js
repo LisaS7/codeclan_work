@@ -2,6 +2,12 @@ import React from "react";
 import Calculator from "../containers/Calculator";
 import { render, fireEvent } from "@testing-library/react";
 
+function chainClicks(buttons) {
+  for (const button of buttons) {
+    fireEvent.click(button);
+  }
+}
+
 describe("Calculator", () => {
   let container;
   let button1, button2, button3, button4, button5, button7;
@@ -30,52 +36,39 @@ describe("Calculator", () => {
   });
 
   it("should add two numbers", () => {
-    fireEvent.click(button1);
-    fireEvent.click(buttonPlus);
-    fireEvent.click(button4);
-    fireEvent.click(buttonEquals);
+    chainClicks([button1, buttonPlus, button4, buttonEquals]);
     expect(runningTotal.textContent).toEqual("5");
   });
 
   it("should subtract one number from another", () => {
-    fireEvent.click(button7);
-    fireEvent.click(buttonMinus);
-    fireEvent.click(button4);
-    fireEvent.click(buttonEquals);
+    chainClicks([button7, buttonMinus, button4, buttonEquals]);
     expect(runningTotal.textContent).toEqual("3");
   });
 
   it("should multiply two numbers", () => {
-    fireEvent.click(button3);
-    fireEvent.click(buttonMultiply);
-    fireEvent.click(button5);
-    fireEvent.click(buttonEquals);
+    chainClicks([button3, buttonMultiply, button5, buttonEquals]);
     expect(runningTotal.textContent).toEqual("15");
   });
 
   it("should divide one number by another", () => {
-    fireEvent.click(button2);
-    fireEvent.click(button1);
-    fireEvent.click(buttonDivide);
-    fireEvent.click(button7);
-    fireEvent.click(buttonEquals);
+    chainClicks([button2, button1, buttonDivide, button7, buttonEquals]);
     expect(runningTotal.textContent).toEqual("3");
   });
 
   it("should concatenate multiple number buttons", () => {
-    fireEvent.click(button1);
-    fireEvent.click(button1);
-    fireEvent.click(button5);
+    chainClicks([button1, button1, button5]);
     expect(runningTotal.textContent).toEqual("115");
   });
 
   it("should chain multiple operations", () => {
-    fireEvent.click(button3);
-    fireEvent.click(buttonPlus);
-    fireEvent.click(button4);
-    fireEvent.click(buttonMultiply);
-    fireEvent.click(button2);
-    fireEvent.click(buttonEquals);
+    chainClicks([
+      button3,
+      buttonPlus,
+      button4,
+      buttonMultiply,
+      button2,
+      buttonEquals,
+    ]);
     expect(runningTotal.textContent).toEqual("14");
   });
 });
