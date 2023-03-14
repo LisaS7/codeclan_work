@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import ArticleList from "../components/ArticleList";
+import SearchForm from "../components/SearchForm";
 
 export default function NewsBox() {
   const [articles, setArticles] = useState([]);
+  const [search, setSearch] = useState("");
 
   async function getData() {
     const response = await fetch(
@@ -20,15 +22,24 @@ export default function NewsBox() {
     });
 
     const articleData = await Promise.all(articlePromises);
-    setArticles(articleData);
+
+    if (search) {
+      const filteredArticles = articleData.filter((article) =>
+        article.title.includes(search)
+      );
+      setArticles(filteredArticles);
+    } else {
+      setArticles(articleData);
+    }
   }
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [search]);
 
   return (
     <main>
+      <SearchForm setSearch={setSearch} />
       <ArticleList articles={articles} />
     </main>
   );
