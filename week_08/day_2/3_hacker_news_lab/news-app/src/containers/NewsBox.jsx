@@ -9,7 +9,7 @@ export default function NewsBox() {
       "https://hacker-news.firebaseio.com/v0/topstories.json"
     );
     const jsonResponse = await response.json();
-    const ids = jsonResponse.splice(0, 20);
+    const ids = jsonResponse.splice(20, 40);
     const urls = ids.map(
       (id) => `https://hacker-news.firebaseio.com/v0/item/${id}.json`
     );
