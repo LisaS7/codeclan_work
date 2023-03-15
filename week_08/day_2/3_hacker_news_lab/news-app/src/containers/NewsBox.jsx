@@ -10,8 +10,8 @@ export default function NewsBox() {
     const response = await fetch(
       "https://hacker-news.firebaseio.com/v0/topstories.json"
     );
-    const jsonResponse = await response.json();
-    const ids = jsonResponse.splice(20, 40);
+    const jsonResponse = response.json();
+    const ids = await jsonResponse.splice(20, 40);
     const urls = ids.map(
       (id) => `https://hacker-news.firebaseio.com/v0/item/${id}.json`
     );
@@ -25,7 +25,7 @@ export default function NewsBox() {
 
     if (search) {
       const filteredArticles = articleData.filter((article) =>
-        article.title.includes(search)
+        article.title.toLowerCase().includes(search.toLowerCase())
       );
       setArticles(filteredArticles);
     } else {
