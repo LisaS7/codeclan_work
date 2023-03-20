@@ -3,6 +3,7 @@
 **Lesson Duration: 60 minutes**
 
 ## Learning Objectives
+
 - Know what Express is
 - Be able to use Express to serve up a JSON response
 
@@ -76,7 +77,7 @@ Now that we have a file to work in, we can `require` Express, so that its functi
 ```js
 //server.js
 
-const express = require('express'); // NEW
+const express = require("express"); // NEW
 ```
 
 When we `require` Express, we are given a function. This function returns an object that provides us with various methods that we'll need to create a server. Let's invoke `express` and store the returned object in a variable called `app`.
@@ -84,7 +85,7 @@ When we `require` Express, we are given a function. This function returns an obj
 ```js
 //server.js
 
-const express = require('express');
+const express = require("express");
 const app = express(); // NEW
 ```
 
@@ -110,11 +111,11 @@ We want to enable a client making a GET request to the home route, to see `'Hell
 ```js
 //server.js
 
-const express = require('express');
+const express = require("express");
 const app = express();
 
-app.get('/', function () { // NEW
-
+app.get("/", function () {
+  // NEW
 });
 ```
 
@@ -127,8 +128,8 @@ This callback should have two parameters: `req` and `res`. When a client makes a
 
 // ...
 
-app.get('/', function (req, res) { // MODIFIED
-
+app.get("/", function (req, res) {
+  // MODIFIED
 });
 ```
 
@@ -139,8 +140,8 @@ The `res` object has a `send` method, which can be used to send various things t
 
 // ...
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
+app.get("/", function (req, res) {
+  res.send("Hello World!");
 });
 ```
 
@@ -163,8 +164,9 @@ All we really need this callback to do is `log` a string stating that the server
 
 // ...
 
-app.listen(9000, function () { // NEW
-  console.log('App running on port 9000');
+app.listen(9000, function () {
+  // NEW
+  console.log("App running on port 9000");
 });
 ```
 
@@ -192,9 +194,9 @@ You should now be able to navigate to http://localhost:9000 in the browser and o
 We've given ourselves a bit of a problem, however. If we change our code, and refresh the page:
 
 ```js
-app.get('/', function (req, res) {
+app.get("/", function (req, res) {
   // CHANGED
-  res.send('Hi, World!');
+  res.send("Hi, World!");
 });
 ```
 
@@ -235,9 +237,9 @@ npm run server:dev
 Rather than send a string as a response, let's send some JSON instead. Our `response` object has a `.json()` method we can use here, which we can pass a JavaScript object which will be sent to the client.
 
 ```js
-app.get('/', function (req, res) {
+app.get("/", function (req, res) {
   // CHANGED
-	res.json({message: "Hello World!"});
+  res.json({ message: "Hello World!" });
 });
 ```
 
@@ -257,21 +259,20 @@ We're going to try to grab a response from our API. Let's see what happens.
 
 ```js
 // App.js
-import React, {useEffect} from 'react';
+import React, { useEffect } from "react";
 
 function App() {
   useEffect(() => {
-    fetch('http://localhost:9000/')
-      .then(response => response.json())
-      .then(data => console.log(data));
-  })
+    fetch("http://localhost:9000/")
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  });
 
   // AS BEFORE
 }
 ```
 
 What do you see if you open your terminal?
-
 
 > Access to fetch at 'http://localhost:9000/' from origin 'http://localhost:3000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
 
@@ -287,17 +288,17 @@ Let's navigate back to our server directory, and install Express' [CORS](https:/
 
 ```sh
 cd ../server
-npm install --save-dev cors
+npm install cors
 ```
 
 Now that we've done this, we can configure our Express server to use CORS.
 
 ```js
-const express = require('express');
+const express = require("express");
 const app = express();
 
 // ADDED
-const cors = require('cors');
+const cors = require("cors");
 app.use(cors());
 ```
 
@@ -308,17 +309,16 @@ We should now be able to write our front-end application.
 Solution:
 
 ```js
-import React, {useEffect, useState} from 'react'; //CHANGED
+import React, { useEffect, useState } from "react"; //CHANGED
 
 function App() {
-
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
-    fetch('http://localhost:9000')
-    .then(res => res.json())
-    .then(data => setMessage(data.message));
-  })
+    fetch("http://localhost:9000")
+      .then((res) => res.json())
+      .then((data) => setMessage(data.message));
+  });
 
   return (
     <>
@@ -337,6 +337,7 @@ What is Express?
 <summary>Answer</summary>
 
 Express is an unopinionated, lightweight JavaScript web framework.
+
 </details>
 <br>
 
