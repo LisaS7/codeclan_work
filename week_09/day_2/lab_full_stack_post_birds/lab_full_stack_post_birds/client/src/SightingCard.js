@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { deleteSighting, putSighting } from "./SightingService";
 
 const SightingCard = ({ sighting, removeSighting, editSighting }) => {
@@ -25,6 +25,8 @@ const SightingCard = ({ sighting, removeSighting, editSighting }) => {
     setUpdatedSighting(sighting2);
     console.log("change", updatedSighting);
   };
+
+  useEffect(() => {}, [updatedSighting]);
 
   return (
     <>
