@@ -20,7 +20,9 @@ const SightingCard = ({ sighting, removeSighting, editSighting }) => {
   };
 
   const onChange = (e) => {
-    updatedSighting[e.target.id] = e.target.value;
+    const sighting2 = updatedSighting;
+    sighting2[e.target.id] = e.target.value;
+    setUpdatedSighting(sighting2);
     console.log("change", updatedSighting);
   };
 
@@ -33,7 +35,7 @@ const SightingCard = ({ sighting, removeSighting, editSighting }) => {
             type="text"
             id="species"
             name="species"
-            value={sighting.species}
+            value={updatedSighting.species}
             onChange={onChange}
           />
         </form>
@@ -43,10 +45,14 @@ const SightingCard = ({ sighting, removeSighting, editSighting }) => {
       {edit ? (
         <form onSubmit={onSubmit} id="sightings-form">
           <label htmlFor="location">Location:</label>
-          <input type="text" value={sighting.location} onChange={onChange} />
+          <input
+            type="text"
+            value={updatedSighting.location}
+            onChange={onChange}
+          />
         </form>
       ) : (
-        <p>Location: {sighting.location}</p>
+        <p>Location: {updatedSighting.location}</p>
       )}
 
       {edit ? (
@@ -56,7 +62,7 @@ const SightingCard = ({ sighting, removeSighting, editSighting }) => {
             type="date"
             id="date"
             name="date"
-            value={sighting.date}
+            value={updatedSighting.date}
             onChange={onChange}
           />
         </form>
