@@ -31,6 +31,18 @@ const createRouter = function (collection) {
   });
 
   // CREATE
+  router.post("/", (req, res) => {
+    collection.insertOne(req.body);
+    collection
+      .find()
+      .toArray()
+      .then((docs) => res.json(docs))
+      .catch((err) => {
+        console.error(err);
+        res.status(500);
+        res.json({ status: 500, error: err });
+      });
+  });
 
   // DESTROY
 
