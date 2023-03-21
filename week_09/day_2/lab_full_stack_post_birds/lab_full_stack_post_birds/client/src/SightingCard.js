@@ -3,9 +3,8 @@ import { deleteSighting, putSighting } from "./SightingService";
 
 const SightingCard = ({ sighting, removeSighting, editSighting }) => {
   const [edit, setEdit] = useState(false);
-  const [species, setSpecies] = useState(sighting.species);
-  const [location, setLocation] = useState(sighting.location);
-  console.log(sighting);
+  const [updatedSighting, setUpdatedSighting] = useState(sighting);
+  console.log(editSighting);
   const handleDelete = () => {
     deleteSighting(sighting._id).then(() => {
       removeSighting(sighting._id);
@@ -21,8 +20,8 @@ const SightingCard = ({ sighting, removeSighting, editSighting }) => {
   };
 
   const onChange = (e) => {
-    sighting[e.target.id] = 0;
-    console.log("change", e.target.value);
+    updatedSighting[e.target.id] = e.target.value;
+    console.log("change", updatedSighting);
   };
 
   return (

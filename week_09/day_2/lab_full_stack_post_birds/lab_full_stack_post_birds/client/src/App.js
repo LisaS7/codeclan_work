@@ -26,8 +26,8 @@ function App() {
     setBirdSightings(sightingsToKeep);
   };
 
-  const editSighting = (id, newSighting) => {
-    const index = birdSightings.indexOf(id);
+  const editSighting = (newSighting) => {
+    const index = birdSightings.indexOf(newSighting);
     const sightingsWithEditedItemRemoved = birdSightings.splice(index, 1);
     setBirdSightings([...sightingsWithEditedItemRemoved, newSighting]);
   };
