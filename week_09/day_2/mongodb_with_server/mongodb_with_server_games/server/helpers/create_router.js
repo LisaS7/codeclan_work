@@ -32,11 +32,9 @@ const createRouter = function (collection) {
 
   // CREATE
   router.post("/", (req, res) => {
-    collection.insertOne(req.body);
     collection
-      .find()
-      .toArray()
-      .then((docs) => res.json(docs))
+      .insertOne(req.body)
+      .then((result) => res.json(result.ops[0]))
       .catch((err) => {
         console.error(err);
         res.status(500);
