@@ -1,10 +1,17 @@
+// lab not great
+// server ok but couldn't do client
+// made some progress thanks to ross
+
 import React, { useState, useEffect } from "react";
 import { deleteSighting, putSighting } from "./SightingService";
 
 const SightingCard = ({ sighting, removeSighting, editSighting }) => {
   const [edit, setEdit] = useState(false);
   const [updatedSighting, setUpdatedSighting] = useState(sighting);
-  console.log(editSighting);
+  const [species, setSpecies] = useState(sighting.species);
+  const [location, setLocation] = useState(sighting.location);
+  const [date, setDate] = useState(sighting.date);
+
   const handleDelete = () => {
     deleteSighting(sighting._id).then(() => {
       removeSighting(sighting._id);
@@ -17,13 +24,24 @@ const SightingCard = ({ sighting, removeSighting, editSighting }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    const updatedSighting = {
+      species,
+      location,
+      date,
+    };
+    editSighting(updatedSighting, sighting._id);
+    setEdit(!edit);
   };
 
   const onChange = (e) => {
-    const sighting2 = updatedSighting;
-    sighting2[e.target.id] = e.target.value;
-    setUpdatedSighting(sighting2);
-    console.log("change", updatedSighting);
+    switch (e.target.id) {
+      case "species":
+        setSpecies(e.target.value);
+      case "location":
+        setLocation(e.target.value);
+      case "date":
+        setDate(e.target.value);
+    }
   };
 
   useEffect(() => {}, [updatedSighting]);
@@ -37,41 +55,28 @@ const SightingCard = ({ sighting, removeSighting, editSighting }) => {
             type="text"
             id="species"
             name="species"
-            value={updatedSighting.species}
+            value={species}
             onChange={onChange}
           />
-        </form>
-      ) : (
-        <h1>{sighting.species}</h1>
-      )}
-      {edit ? (
-        <form onSubmit={onSubmit} id="sightings-form">
           <label htmlFor="location">Location:</label>
-          <input
-            type="text"
-            value={updatedSighting.location}
-            onChange={onChange}
-          />
-        </form>
-      ) : (
-        <p>Location: {updatedSighting.location}</p>
-      )}
-
-      {edit ? (
-        <form onSubmit={onSubmit} id="sightings-form">
+          <input type="text" value={location} onChange={onChange} />
           <label htmlFor="date">Date:</label>
           <input
             type="date"
             id="date"
             name="date"
-            value={updatedSighting.date}
+            value={date}
             onChange={onChange}
           />
+          <button>Save</button>
         </form>
       ) : (
-        <p>Date: {sighting.date}</p>
+        <>
+          <h1>{sighting.species}</h1>
+          <p>Location: {sighting.location}</p>
+          <p>Date: {sighting.date}</p>
+        </>
       )}
-
       <button onClick={handleUpdate}> ✏️ </button>
       <button onClick={handleDelete}> 🗑 </button>
       <hr></hr>
