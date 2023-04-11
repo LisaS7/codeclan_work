@@ -1,3 +1,10 @@
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
 public class Printer {
 
     int sheets;
@@ -5,14 +12,6 @@ public class Printer {
 
     public Printer(int sheets) {
         this.sheets = sheets;
-    }
-
-    public int getSheets() {
-        return sheets;
-    }
-
-    public int getToner() {
-        return toner;
     }
 
     public void print(int pages, int copies) {

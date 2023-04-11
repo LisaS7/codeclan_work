@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ca6f7780-a79e-4ec1-aead-4c0d80c923ff" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Bear.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/River.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Salmon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/BearTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/RiverTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Bear.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/BearTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BusStop/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BusStop/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BusStop/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BusStop/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BusStop/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BusStop/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BusStop/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BusStop/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BusStop/src/main/java/Bus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BusStop/src/main/java/BusStop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BusStop/src/main/java/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BusStop/src/test/java/BusStopTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BusStop/src/test/java/BusTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BusStop/src/test/java/PersonTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BusStop/target/classes/Bus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BusStop/target/classes/BusStop.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BusStop/target/classes/Person.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BusStop/target/test-classes/BusStopTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BusStop/target/test-classes/BusTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BusStop/target/test-classes/PersonTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HashMapDemo/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HashMapDemo/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HashMapDemo/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HashMapDemo/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HashMapDemo/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HashMapDemo/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HashMapDemo/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HashMapDemo/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HashMapDemo/src/main/java/Runner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HashMapDemo/target/classes/Runner.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../arrays/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../arrays/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../arrays/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../arrays/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../arrays/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../arrays/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../arrays/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../arrays/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../arrays/src/main/java/NumberList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../arrays/src/main/java/WordCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../arrays/src/test/java/NumberListTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../arrays/src/test/java/WordCollectionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day_1/homework/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day_1/homework/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day_1/homework/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day_1/homework/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day_1/homework/src/main/java/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../day_1/homework/src/main/java/Printer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day_1/homework/src/main/java/WaterBottle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../day_1/homework/src/main/java/WaterBottle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day_1/homework/target/classes/Printer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../day_1/homework/target/classes/Printer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day_1/homework/target/classes/WaterBottle.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../day_1/homework/target/classes/WaterBottle.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2OHUj1gMEG0mumRJvV6Ood8sPzO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ca6f7780-a79e-4ec1-aead-4c0d80c923ff" name="Changes" comment="" />
+      <created>1681217134116</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1681217134116</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
