@@ -1,4 +1,4 @@
-public class Vehicle {
+public abstract class Vehicle {
 
     private String model;
     private int numberOfWheels;
@@ -7,6 +7,8 @@ public class Vehicle {
         this.model = model;
         this.numberOfWheels = numberOfWheels;
     }
+
+    public abstract String boardingInstructions();
 
     public String drivingInstructions(){
         return "Turn the key to start.";

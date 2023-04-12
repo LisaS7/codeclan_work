@@ -8,6 +8,11 @@ public class Car extends Vehicle {
         this.numberOfDoors = numberOfDoors;
     }
 
+    @Override
+    public String boardingInstructions() {
+        return "Open a door and hop in";
+    }
+
     public String drivingInstructions()
     {
         return super.drivingInstructions() + " Use steering wheel to steer.";

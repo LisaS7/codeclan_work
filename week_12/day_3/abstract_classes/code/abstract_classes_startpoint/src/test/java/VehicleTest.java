@@ -1,4 +1,5 @@
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -8,27 +9,30 @@ import static org.junit.Assert.assertEquals;
 public class VehicleTest {
     Vehicle vehicle;
 
-    @Before
-    public void before() {
-        vehicle = new Vehicle("Ford Escort", 4);
-    }
+//    @Before
+//    public void before() {
+//        vehicle = new Vehicle("Ford Escort", 4);
+//    }
 
     @Test
+    @Ignore
     public void vehicleHasNumberOfWheels() {
         assertEquals(4, vehicle.getNumberOfWheels());
     }
 
     @Test
+    @Ignore
     public void vehicleHasModel() {
         assertEquals("Ford Escort", vehicle.getModel());
     }
 
     @Test
+    @Ignore
     public void hasDrivingInstructions() {
         assertEquals("Turn the key to start.", vehicle.drivingInstructions());
     }
 
-    //BELOW: Inheritance related tests:
+//    BELOW: Inheritance related tests:
 
     @Test
     public void carAsVehicle() {
@@ -54,7 +58,7 @@ public class VehicleTest {
         ArrayList<Vehicle> garage = new ArrayList<Vehicle>();
         garage.add( new Car("Audi A8", 2));
         garage.add( new Motorbike("Harley"));
-        garage.add( new Vehicle("Mini Morris", 4)); //note: this won't work with abstract classes
+//        garage.add( new Vehicle("Mini Morris", 4)); //note: this won't work with abstract classes
         assertEquals(3, garage.size());
     }
 
