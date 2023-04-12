@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e90b8d20-b999-478d-93aa-0fcbdfe447fb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Library/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Library/src/main/java/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Library/src/main/java/Borrower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Library/src/main/java/Library.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Library/src/test/java/BookTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Library/src/test/java/BorrowerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Library/src/test/java/LibraryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BearRiverFish/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BearRiverFish/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e90b8d20-b999-478d-93aa-0fcbdfe447fb" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
