@@ -28,4 +28,13 @@ public class Library {
         return totals;
     }
 
+    public Book findByTitle(String title) {
+        for(Book book : books) {
+            if(book.getTitle() == title) {
+                return book;
+            }
+        }
+        return null;
+    }
+
 }

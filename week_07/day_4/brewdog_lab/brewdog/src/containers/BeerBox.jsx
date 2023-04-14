@@ -27,7 +27,20 @@ function BeerBox() {
   }
 
   useEffect(() => {
-    getBeers();
+    getBeers().then(
+      setBeers(
+        [...beers].sort((beer1, beer2) => {
+          if (beer1.name < beer2.name) {
+            console.log(beer1.name);
+            return -1;
+          }
+          if (beer1.name > beer2.name) {
+            return 1;
+          }
+          return 0;
+        })
+      )
+    );
   }, []);
 
   return (
