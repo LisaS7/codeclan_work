@@ -31,13 +31,13 @@ public class PlaygroundTest {
 
     @Test
     public void hasMaxAgeRestriction__false() {
-        Visitor visitor = new Visitor(23, 1.8, 10.50);
+        Visitor visitor = new Visitor(23, 180, 10.50);
         assertEquals(false, playground.isAllowedTo(visitor));
     }
 
     @Test
     public void hasMaxAgeRestriction__true() {
-        Visitor visitor = new Visitor(10, 1.2, 4.30);
+        Visitor visitor = new Visitor(10, 120, 4.30);
         assertEquals(true, playground.isAllowedTo(visitor));
     }
 }

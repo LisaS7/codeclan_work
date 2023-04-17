@@ -2,6 +2,7 @@ package attractions;
 
 import org.junit.Before;
 import org.junit.Test;
+import people.Visitor;
 
 import static org.junit.Assert.assertEquals;
 
@@ -27,5 +28,29 @@ public class RollercoasterTest {
     @Test
     public void hasVisitCount() {
         assertEquals(0, rollerCoaster.getVisitCount());
+    }
+
+    @Test
+    public void hasMinAgeRestriction__false() {
+        Visitor visitor = new Visitor(10, 120, 4.30);
+        assertEquals(false, rollerCoaster.isAllowedTo(visitor));
+    }
+
+    @Test
+    public void hasMinAgeRestriction__true() {
+        Visitor visitor = new Visitor(23, 180, 10.50);
+        assertEquals(true, rollerCoaster.isAllowedTo(visitor));
+    }
+
+    @Test
+    public void hasMinHeightRestriction__false() {
+        Visitor visitor = new Visitor(10, 120, 4.30);
+        assertEquals(false, rollerCoaster.isAllowedTo(visitor));
+    }
+
+    @Test
+    public void hasMinHeightRestriction__true() {
+        Visitor visitor = new Visitor(23, 180, 10.50);
+        assertEquals(true, rollerCoaster.isAllowedTo(visitor));
     }
 }

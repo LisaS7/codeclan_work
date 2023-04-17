@@ -32,13 +32,13 @@ public class TobaccoStallTest {
 
     @Test
     public void hasMinAgeRestriction__true() {
-        Visitor visitor = new Visitor(23, 1.8, 10.50);
+        Visitor visitor = new Visitor(23, 180, 10.50);
         assertEquals(true, tobaccoStall.isAllowedTo(visitor));
     }
 
     @Test
     public void hasMinAgeRestriction__false() {
-        Visitor visitor = new Visitor(10, 1.2, 4.30);
+        Visitor visitor = new Visitor(10, 120, 4.30);
         assertEquals(false, tobaccoStall.isAllowedTo(visitor));
     }
 }
