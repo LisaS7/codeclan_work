@@ -11,7 +11,7 @@ public class IceCreamStallTest {
 
     @Before
     public void setUp() throws Exception {
-        iceCreamStall = new IceCreamStall("Dream Cones", "Vanilla Ice", ParkingSpot.A4);
+        iceCreamStall = new IceCreamStall("Dream Cones", "Vanilla Ice", ParkingSpot.A4, 5);
     }
 
     @Test
@@ -27,5 +27,10 @@ public class IceCreamStallTest {
     @Test
     public void hasParkingSpot() {
         assertEquals(ParkingSpot.A4, iceCreamStall.getParkingSpot());
+    }
+
+    @Test
+    public void hasRating() {
+        assertEquals(5, iceCreamStall.getRating());
     }
 }
