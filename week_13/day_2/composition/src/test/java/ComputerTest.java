@@ -1,5 +1,6 @@
 import device_management.Computer;
 import device_management.Monitor;
+import device_management.Printer;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -26,13 +27,21 @@ public class ComputerTest {
     }
 
     @Test
-    public void hasMonitor() {
-        assertEquals(22, computer.getMonitor().getScreenSize());
-        assertEquals(786432, computer.getMonitor().getPixels());
+    public void canOutputData() {
+        assertEquals("space invaders is now on screen", computer.outputData("space invaders"));
     }
 
     @Test
-    public void canOutputData() {
-        assertEquals("space invaders is now on screen", computer.outputData("space invaders"));
+    public void canOutputDataViaPrinter(){
+        Printer printer = new Printer("Epson", "Stylus", 120, 4);
+        computer = new Computer(16, 2, printer);
+        assertEquals("printing: space invaders", computer.outputData("space invaders"));
+    }
+
+    @Test
+    public void canSetNewOutputDevice() {
+        Printer printer = new Printer("Epson", "Stylus", 120, 4);
+        computer.setOutputDevice(printer);
+        assertEquals("printing: space invaders", computer.outputData("space invaders"));
     }
 }

@@ -1,6 +1,8 @@
 package device_management;
 
-public class Speaker extends SoundDevice {
+import behaviours.IOutput;
+
+public class Speaker extends SoundDevice implements IOutput {
     public Speaker(int maxVolume) {
         super(maxVolume);
     }
