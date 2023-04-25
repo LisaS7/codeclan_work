@@ -89,4 +89,12 @@ public class Pirate {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public void setShip(Ship ship) {
+        this.ship = ship;
+    }
+
+    public void addRaid(Raid raid) {
+        this.raids.add(raid);
+    }
 }
