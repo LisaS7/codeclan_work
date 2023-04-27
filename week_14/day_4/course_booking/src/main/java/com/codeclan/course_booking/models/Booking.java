@@ -32,7 +32,21 @@ public class Booking {
         this.customer = customer;
     }
 
+    public Booking(String date, Course course, Customer customer) {
+        this.date = getLocalDateFromString(date);
+        this.course = course;
+        this.customer = customer;
+
+        customer.addBookings(this);
+        course.addBookings(this);
+    }
+
+    public static LocalDate getLocalDateFromString(String date) {
+        return LocalDate.parse(date, DateTimeFormatter.ofPattern("dd-MM-yy"));
+    }
+
     public String getFormattedDate() {
         return this.date.format(DateTimeFormatter.ofPattern("dd-MM-yy"));
     }
+
 }

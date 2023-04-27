@@ -19,7 +19,7 @@ public class Customer {
     private int age;
 
     @OneToMany(mappedBy = "customer")
-    @JsonIgnoreProperties({"bookings"})
+    @JsonIgnoreProperties({"customer"})
     private List<Booking> bookings = new ArrayList<>();
 
     public Customer(String name, String location, int age) {

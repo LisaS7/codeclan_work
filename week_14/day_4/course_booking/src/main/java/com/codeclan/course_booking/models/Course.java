@@ -19,16 +19,20 @@ public class Course {
     private int rating;
 
     @OneToMany(mappedBy = "course")
-    @JsonIgnoreProperties({"courses"})
+    @JsonIgnoreProperties({"course"})
     private List<Booking> bookings = new ArrayList<>();
 
     public Course(String name, String location, int rating) {
         this.name = name;
         this.location = location;
-        this.rating = rating;
+
+        if (rating > 0 && rating <= 5) {
+            this.rating = rating;
+        }
     }
 
     public void addBookings(Booking ...bookings) {
         this.bookings.addAll(List.of(bookings));
     }
+
 }

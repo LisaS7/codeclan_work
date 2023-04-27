@@ -44,4 +44,10 @@ public class CourseTest {
     public void hasBookings() {
         assertEquals(2, course.getBookings().size());
     }
+
+    @Test
+    public void createWithInvalidRating() {
+        Course course2 = new Course("Test Rating", "Aberdeen", 7);
+        assertEquals(7, course2.getRating());
+    }
 }
